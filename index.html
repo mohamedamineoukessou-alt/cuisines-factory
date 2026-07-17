@@ -1561,6 +1561,9 @@ function buildAll(){
   if (gv && gv.childElementCount) gv.innerHTML = "";
   if (currentView === "galerie-complete") renderGalCategory(galActiveCat);
 
+  /* Active la glisse des comparateurs avant/après (créés à l'instant) */
+  if (typeof initSliders === "function") initSliders();
+
   /* Traduit les libellés fraîchement injectés (Avant / Après / Plan 3D) selon la langue active */
   if (typeof setLang === "function" && typeof currentLang !== "undefined") setLang(currentLang);
 }
@@ -1883,7 +1886,10 @@ document.addEventListener("keydown", function(e){
 });
 
 /* ================= Comparateurs avant / après (souris, tactile, clavier) ================= */
-$$("[data-ba]").forEach(function(w){
+function initSliders(){
+ $$("[data-ba]").forEach(function(w){
+  if (w.dataset.baInit) return;
+  w.dataset.baInit = "1";
   let drag = false;
   function apply(pct){
     pct = Math.max(6, Math.min(94, pct));
@@ -1910,7 +1916,8 @@ $$("[data-ba]").forEach(function(w){
     else if (e.key === "Home"){ e.preventDefault(); apply(6); }
     else if (e.key === "End"){ e.preventDefault(); apply(94); }
   });
-});
+ });
+}
 
 /* ================= Colonnes d'avis (boucle infinie) ================= */
 if (!reduced){
