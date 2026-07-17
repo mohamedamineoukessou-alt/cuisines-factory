@@ -1,0 +1,89 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Langue de l'interface d'administration
+locale: fr
+
+# Dossier où sont déposées les nouvelles images uploadées depuis l'admin
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Message affiché en haut de chaque brouillon (facultatif)
+site_url: https://cuisinesfactory.netlify.app
+display_url: https://cuisinesfactory.netlify.app
+
+collections:
+  # -------- Galerie · Cuisines --------
+  - name: "galerie_cuisines"
+    label: "Galerie · Cuisines"
+    label_singular: "Galerie Cuisines"
+    description: "Les photos affichées dans l'onglet « Cuisines » de la galerie."
+    files:
+      - name: "cuisines"
+        label: "Photos de cuisines"
+        file: "content/galerie-cuisines.json"
+        fields:
+          - label: "Photos"
+            label_singular: "Photo"
+            name: "images"
+            widget: "list"
+            summary: "{{fields.image}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+
+  # -------- Galerie · Vitrines --------
+  - name: "galerie_vitrines"
+    label: "Galerie · Vitrines"
+    label_singular: "Galerie Vitrines"
+    description: "Les photos affichées dans l'onglet « Vitrines » de la galerie."
+    files:
+      - name: "vitrines"
+        label: "Photos de vitrines"
+        file: "content/galerie-vitrines.json"
+        fields:
+          - label: "Photos"
+            label_singular: "Photo"
+            name: "images"
+            widget: "list"
+            summary: "{{fields.image}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+
+  # -------- Sliders · Design 3D (plan 3D → réalisation) --------
+  - name: "sliders_3d"
+    label: "Sliders · Design 3D"
+    label_singular: "Comparateur 3D"
+    description: "Comparateurs « Plan 3D → Réalisation » de la section Design."
+    files:
+      - name: "sliders_3d"
+        label: "Comparateurs 3D"
+        file: "content/sliders-3d.json"
+        fields:
+          - label: "Comparateurs"
+            label_singular: "Comparateur"
+            name: "pairs"
+            widget: "list"
+            summary: "{{fields.apres}}"
+            fields:
+              - { label: "Plan 3D (image de gauche)", name: "avant", widget: "image" }
+              - { label: "Réalisation (image de droite)", name: "apres", widget: "image" }
+
+  # -------- Sliders · Avant / Après --------
+  - name: "sliders_avant_apres"
+    label: "Sliders · Avant / Après"
+    label_singular: "Comparateur Avant/Après"
+    description: "Comparateurs « Avant → Après » de la section réalisations."
+    files:
+      - name: "sliders_avant_apres"
+        label: "Comparateurs Avant / Après"
+        file: "content/sliders-avant-apres.json"
+        fields:
+          - label: "Comparateurs"
+            label_singular: "Comparateur"
+            name: "pairs"
+            widget: "list"
+            summary: "{{fields.apres}}"
+            fields:
+              - { label: "Avant (image de gauche)", name: "avant", widget: "image" }
+              - { label: "Après (image de droite)", name: "apres", widget: "image" }

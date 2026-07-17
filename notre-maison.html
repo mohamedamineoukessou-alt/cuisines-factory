@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>En savoir plus · Cuisines Factory</title>
+<meta name="description" content="Cuisines Factory : aménagements sur mesure, collections, ferrures Blum et savoir-faire suisse. Découvrez ce qui rend chaque cuisine unique, comme vous.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terracotta:#8A2E26;--epice:#5E2215;--noyer:#32110B;--chene:#A88964;--grege:#9A886D;
+  --ivoire:#E7E4DF;--ivoire-2:#F2F0EB;--carte:#FBFAF7;
+  --font-serif:'Cormorant Garamond','Tajawal',serif;--font-nav:'Manrope','Tajawal',sans-serif;--font-body:'Inter','Tajawal',sans-serif;
+  --r-media:16px;--ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ivoire);color:var(--noyer);
+  font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased;
+  display:flex;flex-direction:column;min-height:100vh;min-height:100dvh;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:none;background:none;cursor:pointer;color:inherit}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+h1,h2{font-family:var(--font-serif);font-weight:500;line-height:1.1}
+[dir="rtl"] body{font-family:'Tajawal',sans-serif}
+[dir="rtl"] h1,[dir="rtl"] h2{font-family:'Tajawal',var(--font-serif)}
+
+/* ---------- Header (sombre, comme le site) ---------- */
+.page-header{
+  position:sticky;top:0;z-index:20;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:14px clamp(18px,4vw,44px);
+  background:rgba(50,17,11,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(168,137,100,.22);color:var(--ivoire);
+}
+.brand{display:flex;align-items:center;gap:13px}
+.brand img{width:42px;height:42px;border-radius:9px;object-fit:cover}
+.brand .mono{display:none;width:42px;height:42px;border-radius:9px;border:1px solid rgba(168,137,100,.5);align-items:center;justify-content:center;font-family:var(--font-serif);color:var(--chene);font-size:1.15rem}
+.brand.noimg img{display:none}.brand.noimg .mono{display:flex}
+.brand .wm{font-family:var(--font-serif);font-size:1.2rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.header-right{display:flex;align-items:center;gap:clamp(12px,2.5vw,22px)}
+.lang{display:flex;align-items:center;gap:3px;font-family:var(--font-nav);font-size:.74rem;font-weight:600;letter-spacing:.1em}
+.lang-btn{color:rgba(231,228,223,.55);padding:5px 6px;border-radius:5px;transition:color .3s}
+.lang-btn:hover{color:var(--ivoire)}
+.lang-btn.active{color:var(--chene)}
+.lang-sep{color:rgba(168,137,100,.4)}
+.back{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-nav);font-weight:600;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ivoire);padding:9px 18px;border-radius:999px;border:1px solid rgba(168,137,100,.4);white-space:nowrap;
+  transition:background .25s ease,border-color .25s ease,transform .16s var(--ease);
+}
+.back:hover{background:rgba(168,137,100,.16);border-color:var(--chene)}
+.back:active{transform:scale(.97)}
+.back svg{width:15px;height:15px}
+[dir="rtl"] .back svg,[dir="rtl"] .brand svg{transform:scaleX(-1)}
+
+main{flex:1}
+
+/* ---------- Bandeau « Unique comme vous » ---------- */
+.banner{
+  background:var(--ivoire);
+  background-image:radial-gradient(120% 90% at 50% -10%,rgba(168,137,100,.18),transparent 60%),radial-gradient(90% 70% at 100% 100%,rgba(138,46,38,.08),transparent 55%);
+  padding:clamp(3.6rem,9vw,6.5rem) 0;text-align:center;
+  border-bottom:1px solid rgba(168,137,100,.25);
+}
+.banner .eyebrow{
+  display:inline-block;font-family:var(--font-nav);font-size:.72rem;font-weight:600;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--terracotta);margin-bottom:1.1rem;
+}
+[dir="rtl"] .banner .eyebrow{letter-spacing:.08em}
+.banner h1{font-size:clamp(2.6rem,6.5vw,4.6rem);color:var(--noyer);letter-spacing:.01em}
+.banner .rule{width:54px;height:2px;background:var(--terracotta);margin:1.3rem auto 0;border-radius:2px}
+.pillars{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  max-width:920px;margin:clamp(2.6rem,5vw,3.8rem) auto 0;
+}
+.pillar{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 clamp(.6rem,2vw,1.6rem)}
+.pillar + .pillar::before{content:"";position:absolute;inset-inline-start:0;top:8%;height:84%;width:1px;background:rgba(154,136,109,.42)}
+.pillar-icon{
+  width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--terracotta);background:rgba(138,46,38,.06);border:1px solid rgba(138,46,38,.16);
+  margin-bottom:1.1rem;transition:transform .3s var(--ease),background .3s ease,color .3s ease;
+}
+.pillar-icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pillar-label{font-family:var(--font-nav);font-weight:600;font-size:.92rem;color:var(--noyer);letter-spacing:.01em;max-width:14ch}
+.pillar:hover .pillar-icon{transform:translateY(-4px);background:var(--terracotta);color:var(--ivoire)}
+@media (max-width:640px){
+  .pillars{grid-template-columns:repeat(2,1fr);gap:2.6rem 0;max-width:420px}
+  .pillar + .pillar::before{display:none}
+}
+
+/* ---------- Sections image / texte ---------- */
+.feature{padding:clamp(3.4rem,8vw,6rem) 0}
+.feature.bg-1{background:var(--carte)}
+.feature.bg-2{background:var(--ivoire)}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5.5vw,5rem);align-items:center}
+.feature-media{
+  position:relative;aspect-ratio:4/5;max-height:560px;width:100%;margin-inline:auto;
+  border-radius:var(--r-media);overflow:hidden;background:var(--noyer);
+  box-shadow:0 26px 60px rgba(94,34,21,.16);
+}
+.feature-media img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.feature-media:hover img{transform:scale(1.045)}
+.feature-media::after{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid rgba(168,137,100,.28);pointer-events:none}
+.feature-title{font-size:clamp(1.9rem,4.2vw,3rem);color:var(--noyer);letter-spacing:.005em}
+.feature-sub{font-family:var(--font-nav);font-weight:500;color:var(--terracotta);font-size:1.02rem;margin-top:.9rem;line-height:1.5}
+.feature-text p{color:#4a3a2e;margin-top:1.2rem;max-width:52ch}
+.feature-text p strong{color:var(--terracotta);font-weight:600}
+[dir="rtl"] .feature-text p{max-width:none}
+
+/* Liste Blum */
+.blum-list{list-style:none;margin-top:1.4rem;display:flex;flex-direction:column;gap:.85rem}
+.blum-list li{position:relative;padding-inline-start:1.7rem;color:#4a3a2e;max-width:52ch}
+.blum-list li::before{content:"";position:absolute;inset-inline-start:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--terracotta)}
+.blum-list li.note{color:var(--grege);font-style:italic;padding-top:.3rem}
+.blum-list li.note::before{background:transparent;border:1px solid var(--chene);top:.6em}
+
+/* image à droite : le texte passe en 1re colonne dans le DOM */
+@media (max-width:820px){
+  .feature-grid{grid-template-columns:1fr;gap:clamp(1.8rem,5vw,2.6rem)}
+  .feature-media{order:-1;max-width:440px;max-height:520px}
+}
+
+/* ---------- Footer (sombre, comme le site) ---------- */
+.page-footer{
+  background:#230C06;color:rgba(231,228,223,.72);text-align:center;
+  padding:clamp(2.8rem,6vw,4rem) 0 2rem;
+}
+.foot-mark{font-family:var(--font-serif);font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ivoire)}
+.foot-base{font-family:var(--font-serif);font-style:italic;color:var(--chene);margin-top:.5rem}
+.foot-line{border:none;border-top:1px solid rgba(168,137,100,.2);width:min(460px,74%);margin:1.9rem auto 1.3rem}
+.foot-copy{font-family:var(--font-nav);font-size:.76rem;color:rgba(231,228,223,.45)}
+.foot-cta{
+  display:inline-flex;align-items:center;gap:9px;margin-top:1.4rem;
+  font-family:var(--font-nav);font-weight:600;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ivoire);padding:11px 24px;border-radius:999px;border:1px solid rgba(168,137,100,.4);
+  transition:background .25s ease,border-color .25s ease,transform .16s var(--ease);
+}
+.foot-cta:hover{background:rgba(168,137,100,.16);border-color:var(--chene)}
+.foot-cta:active{transform:scale(.97)}
+.foot-cta svg{width:15px;height:15px}
+[dir="rtl"] .foot-cta svg{transform:scaleX(-1)}
+
+/* ---------- Révélation au scroll ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.pillar{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.pillars.in .pillar{opacity:1;transform:none}
+.pillars.in .pillar:nth-child(1){transition-delay:.05s}
+.pillars.in .pillar:nth-child(2){transition-delay:.13s}
+.pillars.in .pillar:nth-child(3){transition-delay:.21s}
+.pillars.in .pillar:nth-child(4){transition-delay:.29s}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .reveal,.pillar{opacity:1;transform:none;transition:none}
+  .feature-media:hover img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <a class="brand" href="index.html" id="brand" aria-label="Cuisines Factory">
+    <img src="assets/logo.png" alt="Logo Cuisines Factory" onerror="document.getElementById('brand').classList.add('noimg')">
+    <span class="mono" aria-hidden="true">CF</span>
+    <span class="wm">Cuisines Factory</span>
+  </a>
+  <div class="header-right">
+    <nav class="lang" aria-label="Langue">
+      <button class="lang-btn active" data-lang="fr">FR</button><span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ar">AR</button><span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </nav>
+    <a class="back" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      <span data-i18n="back">Retour au site</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1 · Bandeau « Unique comme vous » -->
+  <section class="banner">
+    <div class="wrap">
+      <span class="eyebrow reveal" data-i18n="banner_eyebrow">Notre maison</span>
+      <h1 class="reveal" data-i18n="banner_title">Unique comme vous</h1>
+      <div class="rule reveal" aria-hidden="true"></div>
+      <div class="pillars" id="pillars">
+        <div class="pillar">
+          <span class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+          </span>
+          <span class="pillar-label" data-i18n="pillar_1">Construit pour durer</span>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+          </span>
+          <span class="pillar-label" data-i18n="pillar_2">Projet personnalisé</span>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 4 3 6.2v13.8l6-2.2 6 2.2 6-2.2V4l-6 2.2L9 4z"/><path d="M9 4v13.8M15 6.2V20"/></svg>
+          </span>
+          <span class="pillar-label" data-i18n="pillar_3">Fabrication Européenne</span>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 9.5 12 5 2 9.5l10 4.5 10-4.5z"/><path d="M6 11.4V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.6"/><path d="M22 9.5V15"/></svg>
+          </span>
+          <span class="pillar-label" data-i18n="pillar_4">Des concepteurs formés</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Aménagements sur-mesure (image gauche / texte droite) -->
+  <section class="feature bg-1">
+    <div class="wrap feature-grid">
+      <div class="feature-media reveal">
+        <img src="images/cuisines-4k/01.jpg" alt="Cuisine sur mesure en bois chaud et pierre, réalisée par Cuisines Factory" width="1600" height="2000" loading="lazy">
+      </div>
+      <div class="feature-text reveal">
+        <h2 class="feature-title" data-i18n="s2_title">Des aménagements sur mesure uniques</h2>
+        <p data-i18n="s2_p">Choisir Cuisines Factory, c'est choisir l'équation parfaite entre savoir-faire européen et accompagnement sur mesure. Depuis plus de 20 ans, nous concevons et fabriquons tous nos meubles pour vos aménagements intérieurs. Nous faisons de chaque projet une réalisation sur mesure pour faire de votre espace de vie un lieu unique, comme vous.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Découvrez nos collections (texte gauche / image droite) -->
+  <section class="feature bg-2">
+    <div class="wrap feature-grid">
+      <div class="feature-text reveal">
+        <h2 class="feature-title" data-i18n="s3_title">Découvrez nos collections</h2>
+        <p class="feature-sub" data-i18n="s3_sub">Inspirez-vous, de la cuisine au dressing jusqu'à la création de meubles sur mesure.</p>
+        <p data-i18n="s3_intro">Nos charnières et tiroirs proviennent de la marque autrichienne Blum, le N°1 mondial des solutions de ferrures :</p>
+        <ul class="blum-list">
+          <li data-i18n="s3_li1">Systèmes de portes relevables</li>
+          <li data-i18n="s3_li2">Systèmes de charnières</li>
+          <li data-i18n="s3_li3">Systèmes coulissants</li>
+          <li class="note" data-i18n="s3_li4">Conçu pour une durabilité inégalée afin de garantir un usage fluide de votre cuisine.</li>
+        </ul>
+      </div>
+      <div class="feature-media reveal">
+        <img src="images/galerie-realisation/2.jpg" alt="Cuisine sur mesure haut de gamme réalisée par Cuisines Factory" width="1280" height="1119" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Savoir-faire suisse (image gauche / texte droite) -->
+  <section class="feature bg-1">
+    <div class="wrap feature-grid">
+      <div class="feature-media reveal">
+        <img src="images/galerie-realisation/19.jpg" alt="Cuisine élégante réalisée par Cuisines Factory, savoir-faire d'atelier" width="1280" height="960" loading="lazy">
+      </div>
+      <div class="feature-text reveal">
+        <h2 class="feature-title" data-i18n="s4_title">Privilégiez le savoir-faire suisse</h2>
+        <p data-i18n-html="s4_p">Avec <strong>plus de 500 réalisations</strong> à notre actif, vous avez la garantie d'être conseillé et accompagné jusqu'à trouver la conception parfaite pour votre future cuisine équipée. Nous sommes également spécialisés dans la <strong>cuisine sur mesure</strong>, adaptée précisément à vos besoins et à votre espace. La mise en œuvre de votre projet sera ensuite confiée à notre équipe de professionnels aguerris, avec qui nous entretenons une collaboration étroite.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  <div class="wrap">
+    <div class="foot-mark">Cuisines Factory</div>
+    <div class="foot-base" data-i18n="foot_base">Matières nobles · Savoir-faire · Intemporel</div>
+    <a class="foot-cta" href="index.html#contact">
+      <span data-i18n="foot_cta">Prendre rendez-vous</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <hr class="foot-line">
+    <p class="foot-copy">© 2026 Cuisines Factory · Kitchen &amp; Bath Contractor</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  const translations = {
+    fr: {
+      meta_title: "En savoir plus · Cuisines Factory",
+      back: "Retour au site",
+      banner_eyebrow: "Notre maison",
+      banner_title: "Unique comme vous",
+      pillar_1: "Construit pour durer",
+      pillar_2: "Projet personnalisé",
+      pillar_3: "Fabrication Européenne",
+      pillar_4: "Des concepteurs formés",
+      s2_title: "Des aménagements sur mesure uniques",
+      s2_p: "Choisir Cuisines Factory, c'est choisir l'équation parfaite entre savoir-faire européen et accompagnement sur mesure. Depuis plus de 20 ans, nous concevons et fabriquons tous nos meubles pour vos aménagements intérieurs. Nous faisons de chaque projet une réalisation sur mesure pour faire de votre espace de vie un lieu unique, comme vous.",
+      s3_title: "Découvrez nos collections",
+      s3_sub: "Inspirez-vous, de la cuisine au dressing jusqu'à la création de meubles sur mesure.",
+      s3_intro: "Nos charnières et tiroirs proviennent de la marque autrichienne Blum, le N°1 mondial des solutions de ferrures :",
+      s3_li1: "Systèmes de portes relevables",
+      s3_li2: "Systèmes de charnières",
+      s3_li3: "Systèmes coulissants",
+      s3_li4: "Conçu pour une durabilité inégalée afin de garantir un usage fluide de votre cuisine.",
+      s4_title: "Privilégiez le savoir-faire suisse",
+      s4_p: "Avec <strong>plus de 500 réalisations</strong> à notre actif, vous avez la garantie d'être conseillé et accompagné jusqu'à trouver la conception parfaite pour votre future cuisine équipée. Nous sommes également spécialisés dans la <strong>cuisine sur mesure</strong>, adaptée précisément à vos besoins et à votre espace. La mise en œuvre de votre projet sera ensuite confiée à notre équipe de professionnels aguerris, avec qui nous entretenons une collaboration étroite.",
+      foot_base: "Matières nobles · Savoir-faire · Intemporel",
+      foot_cta: "Prendre rendez-vous"
+    },
+    ar: {
+      meta_title: "اعرفوا المزيد · كوزين فاكتوري",
+      back: "العودة إلى الموقع",
+      banner_eyebrow: "دارُنا",
+      banner_title: "فريدٌ مثلكم",
+      pillar_1: "صُنع ليدوم",
+      pillar_2: "مشروع مخصّص",
+      pillar_3: "تصنيع أوروبي",
+      pillar_4: "مصمّمون مؤهّلون",
+      s2_title: "تجهيزات فريدة مصمَّمة على المقاس",
+      s2_p: "اختيار كوزين فاكتوري يعني اختيار المعادلة المثالية بين الحرفية الأوروبية والمرافقة المفصّلة على المقاس. منذ أكثر من 20 عامًا، نصمّم ونصنع كل أثاثنا لتجهيز فضاءاتكم الداخلية. نحوّل كل مشروع إلى إنجاز على المقاس ليصبح فضاء عيشكم مكانًا فريدًا مثلكم.",
+      s3_title: "اكتشفوا مجموعاتنا",
+      s3_sub: "استلهموا، من المطبخ إلى غرفة الملابس وصولًا إلى صناعة الأثاث على المقاس.",
+      s3_intro: "مفصّلاتنا وأدراجنا من العلامة النمساوية Blum، الأولى عالميًا في حلول التجهيزات المعدنية:",
+      s3_li1: "أنظمة الأبواب المرفوعة",
+      s3_li2: "أنظمة المفصّلات",
+      s3_li3: "الأنظمة المنزلقة",
+      s3_li4: "مصمَّمة لمتانة لا تُضاهى تضمن استعمالًا سلسًا لمطبخكم.",
+      s4_title: "اختاروا الحرفية السويسرية",
+      s4_p: "برصيد <strong>أكثر من 500 إنجاز</strong>، لكم ضمان المشورة والمرافقة حتى الوصول إلى التصميم المثالي لمطبخكم المجهّز المقبل. كما نتخصّص في <strong>المطبخ المفصّل على المقاس</strong>، المكيّف تمامًا مع احتياجاتكم وفضائكم. ثمّ يُعهد بتنفيذ مشروعكم إلى فريقنا من المحترفين المخضرمين الذين تربطنا بهم شراكة وثيقة.",
+      foot_base: "خامات نبيلة · حرفية عالية · طابع خالد",
+      foot_cta: "احجزوا موعدًا"
+    },
+    en: {
+      meta_title: "Learn more · Cuisines Factory",
+      back: "Back to site",
+      banner_eyebrow: "Our house",
+      banner_title: "Unique, like you",
+      pillar_1: "Built to last",
+      pillar_2: "Tailored project",
+      pillar_3: "European craftsmanship",
+      pillar_4: "Trained designers",
+      s2_title: "Uniquely bespoke interiors",
+      s2_p: "Choosing Cuisines Factory means choosing the perfect balance between European craftsmanship and bespoke support. For over 20 years, we have designed and manufactured all our furniture for your interior spaces. We turn every project into a made-to-measure creation, making your living space a place as unique as you are.",
+      s3_title: "Discover our collections",
+      s3_sub: "Find inspiration, from the kitchen to the dressing room and bespoke furniture.",
+      s3_intro: "Our hinges and drawers come from the Austrian brand Blum, the world's number one in hardware solutions:",
+      s3_li1: "Lift-up door systems",
+      s3_li2: "Hinge systems",
+      s3_li3: "Sliding systems",
+      s3_li4: "Engineered for unmatched durability, keeping your kitchen running smoothly.",
+      s4_title: "Choose Swiss craftsmanship",
+      s4_p: "With <strong>more than 500 completed projects</strong> to our name, you are guaranteed advice and support until we find the perfect design for your future fitted kitchen. We also specialise in <strong>bespoke kitchens</strong>, tailored precisely to your needs and your space. Your project is then entrusted to our team of seasoned professionals, with whom we work hand in hand.",
+      foot_base: "Noble materials · Craftsmanship · Timeless",
+      foot_cta: "Book an appointment"
+    }
+  };
+
+  let currentLang = "fr";
+  const $$ = function(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); };
+
+  function setLang(lang){
+    currentLang = lang;
+    const t = translations[lang];
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+    $$("[data-i18n]").forEach(function(el){ const v = t[el.getAttribute("data-i18n")]; if (v !== undefined) el.textContent = v; });
+    $$("[data-i18n-html]").forEach(function(el){ const v = t[el.getAttribute("data-i18n-html")]; if (v !== undefined) el.innerHTML = v; });
+    $$(".lang-btn").forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-lang") === lang); });
+    document.title = t.meta_title;
+  }
+  $$(".lang-btn").forEach(function(b){ b.addEventListener("click", function(){ setLang(b.getAttribute("data-lang")); }); });
+
+  /* Révélation au scroll */
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  $$(".reveal, #pillars").forEach(function(el){ io.observe(el); });
+
+  setLang("fr");
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Netlify — le HTML est toujours revalidé (jamais de vieux HTML/JS en cache)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Les médias sont versionnés par leur nom : cache long autorisé
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Contenu éditable par le CMS : toujours revalidé pour refléter les mises à jour
+/content/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# La config de l'admin doit être servie comme du YAML
+/admin/config.yml
+  Content-Type: text/yaml; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate

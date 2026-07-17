@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuisines Factory · Cuisines sur mesure haut de gamme à Témara &amp; Rabat</title>
+<meta name="description" content="Cuisines Factory conçoit, fabrique et pose des cuisines sur mesure haut de gamme à Rabat et Témara. Plus de 20 ans d'expérience en Suisse, conception 3D, matières nobles, finitions d'exception.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cuisines Factory · Cuisines sur mesure haut de gamme">
+<meta property="og:description" content="Créateur de cuisines sur mesure haut de gamme à Rabat &amp; Témara. Conception 3D, fabrication, pose. Plus de 20 ans d'expérience en Suisse.">
+<meta property="og:image" content="assets/logo.png?v=2">
+<meta property="og:locale" content="fr_MA">
+<meta name="theme-color" content="#32110B">
+<link rel="icon" type="image/png" href="assets/logo.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Cuisines Factory","description":"Cuisines sur mesure haut de gamme à Rabat et Témara","address":{"@type":"PostalAddress","streetAddress":"371 Rue Erfoud, secteur 3 Ryad Oulad Mtaa","addressLocality":"Témara","postalCode":"12000","addressCountry":"MA"},"telephone":"+212623230649","url":"https://cuisinesfactory.ma","sameAs":["https://www.instagram.com/cuisinesfactory","https://web.facebook.com/people/Cuisines-factory/61556800963354/"]}
+</script>
+<style>
+/* ============================================================
+   CUISINES FACTORY · identité
+   Rayons : médias & images 16px · cartes 24px · boutons pilule
+   ============================================================ */
+:root{
+  --terracotta:#8A2E26;
+  --epice:#5E2215;
+  --noyer:#32110B;
+  --chene:#A88964;
+  --grege:#9A886D;
+  --ivoire:#E7E4DF;
+  --ivoire-2:#F2F0EB;
+  --carte:#FBFAF7;
+  --r-media:16px;
+  --r-card:24px;
+  --font-serif:'Cormorant Garamond','Tajawal',serif;
+  --font-nav:'Manrope','Tajawal',sans-serif;
+  --font-body:'Inter','Tajawal',sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ivoire);
+  color:var(--noyer);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  overscroll-behavior-y:contain;
+}
+body.menu-open,body.lb-open{overflow:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:none;background:none;cursor:pointer;color:inherit}
+.container{width:min(1200px,92%);margin-inline:auto}
+section{position:relative}
+.section-pad{padding:clamp(4.5rem,9vw,7.5rem) 0}
+h1,h2,h3{font-family:var(--font-serif);font-weight:500;line-height:1.12}
+.section-title{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--noyer);letter-spacing:.01em}
+.section-sub{font-family:var(--font-body);color:var(--grege);max-width:58ch;margin-top:1rem}
+.eyebrow{
+  display:inline-block;font-family:var(--font-nav);font-size:.72rem;font-weight:600;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--terracotta);margin-bottom:1.1rem;
+}
+.hairline{border:none;border-top:1px solid rgba(168,137,100,.35)}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{letter-spacing:0;font-family:'Tajawal',var(--font-serif);font-weight:500}
+[dir="rtl"] .eyebrow{letter-spacing:.06em}
+[dir="rtl"] body,[dir="rtl"] .section-sub{font-family:'Tajawal',sans-serif}
+
+/* ---------- Révélation au scroll ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Écran de chargement ---------- */
+#loader{
+  position:fixed;inset:0;z-index:500;background:var(--noyer);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  transition:opacity .7s ease,visibility .7s ease;
+}
+#loader.hidden{opacity:0;visibility:hidden}
+#loader .loader-logo{width:82px;height:82px;border-radius:14px;object-fit:cover;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+#loader .loader-mono{
+  display:none;width:82px;height:82px;border-radius:14px;border:1px solid rgba(168,137,100,.5);
+  font-family:var(--font-serif);font-size:2rem;color:var(--chene);
+  align-items:center;justify-content:center;
+}
+#loader.noimg .loader-logo{display:none}
+#loader.noimg .loader-mono{display:flex}
+#loader .loader-name{font-family:var(--font-serif);font-size:1.15rem;letter-spacing:.35em;color:var(--ivoire);text-transform:uppercase;padding-inline-start:.35em}
+#loader .loader-bar{width:220px;height:2px;background:rgba(168,137,100,.22);border-radius:2px;overflow:hidden}
+#loader .loader-fill{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--chene),#C9AE86);transition:width .25s ease}
+
+/* ---------- Header ---------- */
+#header{
+  position:fixed;top:0;left:0;right:0;z-index:310;
+  padding:16px clamp(18px,4vw,44px);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .45s ease,box-shadow .45s ease,padding .45s ease;
+  background:transparent;
+}
+#header.scrolled{
+  background:rgba(50,17,11,.78);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 rgba(168,137,100,.22);
+  padding-top:10px;padding-bottom:10px;
+}
+.brandmark{display:flex;align-items:center;gap:14px;z-index:301}
+.brandmark img{width:46px;height:46px;border-radius:10px;object-fit:cover}
+.brandmark .mono-fallback{
+  display:none;width:46px;height:46px;border-radius:10px;border:1px solid rgba(168,137,100,.55);
+  font-family:var(--font-serif);font-size:1.25rem;color:var(--chene);align-items:center;justify-content:center;
+  background:rgba(50,17,11,.5);
+}
+.brandmark.noimg img{display:none}
+.brandmark.noimg .mono-fallback{display:flex}
+.brandmark .wordmark{font-family:var(--font-serif);color:var(--ivoire);font-size:1.28rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.header-right{display:flex;align-items:center;gap:clamp(12px,2.5vw,26px);z-index:301}
+
+/* Navigation desktop (masquée en mobile/tablette, hamburger à la place) */
+.desktop-nav{display:none;align-items:center;gap:clamp(1rem,2.1vw,1.9rem)}
+.desktop-nav a{
+  position:relative;font-family:var(--font-nav);font-size:.84rem;font-weight:500;letter-spacing:.02em;
+  color:rgba(231,228,223,.82);padding:5px 0;white-space:nowrap;transition:color .3s;
+}
+.desktop-nav a::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--chene);
+  transform:scaleX(0);transform-origin:center;transition:transform .35s var(--ease);
+}
+.desktop-nav a:hover{color:var(--ivoire)}
+.desktop-nav a:hover::after{transform:scaleX(1)}
+@media (min-width:1024px){
+  .desktop-nav{display:flex;flex:1;justify-content:center}
+  #header #burger{display:none}
+}
+@media (min-width:1024px) and (max-width:1180px){
+  .desktop-nav{gap:1rem}
+  .desktop-nav a{font-size:.79rem}
+  .brandmark .wordmark{display:none}
+}
+
+.lang-switch{display:flex;align-items:center;gap:4px;font-family:var(--font-nav);font-size:.74rem;font-weight:600;letter-spacing:.12em}
+.lang-btn{color:rgba(231,228,223,.55);padding:6px 7px;border-radius:6px;transition:color .3s}
+.lang-btn:hover{color:var(--ivoire)}
+.lang-btn.active{color:var(--chene)}
+.lang-sep{color:rgba(168,137,100,.4);font-size:.7rem}
+
+#burger{width:46px;height:46px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;border-radius:50%;transition:background .3s}
+#burger:hover{background:rgba(168,137,100,.14)}
+#burger span{display:block;width:24px;height:1.5px;background:var(--ivoire);transition:transform .45s var(--ease),opacity .3s,width .3s}
+#burger:hover span:nth-child(2){width:16px}
+body.menu-open #burger span:nth-child(1){transform:translateY(4.2px) rotate(45deg)}
+body.menu-open #burger span:nth-child(2){transform:translateY(-4.2px) rotate(-45deg);width:24px}
+
+/* ---------- Menu plein écran ---------- */
+#menu{
+  position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;z-index:300;
+  background:var(--noyer);
+  background-image:radial-gradient(120% 80% at 50% 0%,rgba(168,137,100,.10),transparent 62%),radial-gradient(90% 70% at 85% 100%,rgba(138,46,38,.14),transparent 55%);
+  overflow-y:auto;
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .55s var(--ease),visibility .55s,transform .55s var(--ease);
+}
+#menu.open{opacity:1;visibility:visible;transform:none}
+.menu-inner{min-height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:110px clamp(24px,7vw,90px) 48px}
+.menu-nav{display:flex;flex-direction:column;gap:clamp(6px,1.4vh,14px)}
+.menu-nav a{
+  font-family:var(--font-serif);font-size:clamp(1.9rem,5.5vh,3.3rem);color:var(--ivoire);
+  width:fit-content;line-height:1.25;
+  opacity:0;transform:translateY(22px);
+  transition:opacity .6s var(--ease),transform .6s var(--ease),color .3s;
+}
+#menu.open .menu-nav a{opacity:1;transform:none}
+.menu-nav a:hover{color:var(--chene)}
+.menu-nav a .n{font-family:var(--font-nav);font-size:.68rem;color:var(--grege);letter-spacing:.2em;vertical-align:super;margin-inline-end:14px}
+#menu.open .menu-nav a:nth-child(1){transition-delay:.10s}
+#menu.open .menu-nav a:nth-child(2){transition-delay:.16s}
+#menu.open .menu-nav a:nth-child(3){transition-delay:.22s}
+#menu.open .menu-nav a:nth-child(4){transition-delay:.28s}
+#menu.open .menu-nav a:nth-child(5){transition-delay:.34s}
+#menu.open .menu-nav a:nth-child(6){transition-delay:.40s}
+.menu-foot{
+  margin-top:48px;padding-top:28px;border-top:1px solid rgba(168,137,100,.25);
+  display:flex;flex-wrap:wrap;gap:26px 56px;align-items:flex-end;justify-content:space-between;
+  opacity:0;transition:opacity .7s ease .45s;
+}
+#menu.open .menu-foot{opacity:1}
+.menu-foot .blk{font-family:var(--font-nav);font-size:.82rem;color:rgba(231,228,223,.72);line-height:1.9}
+.menu-foot .blk strong{display:block;color:var(--chene);font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:6px}
+.menu-foot a:hover{color:var(--ivoire)}
+.menu-lang{display:flex;gap:6px}
+.menu-lang .lang-btn{font-size:.85rem;color:rgba(231,228,223,.5);border:1px solid transparent}
+.menu-lang .lang-btn.active{color:var(--chene);border-color:rgba(168,137,100,.4)}
+
+/* ---------- Hero ---------- */
+/* ---------- Hero · effet scroll-expansion (vidéo qui grandit) ---------- */
+#hero{height:100vh;height:100dvh;overflow:hidden;background:var(--noyer)}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.42) saturate(.85);transition:opacity .3s linear}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(50,17,11,.55),rgba(50,17,11,.15) 45%,rgba(50,17,11,.6))}
+.hero-media{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:300px;height:400px;border-radius:var(--r-media);overflow:hidden;
+  background:#1f0b06;box-shadow:0 34px 90px rgba(20,6,3,.6);
+  z-index:2;
+}
+.hero-media::after{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid rgba(168,137,100,.35);pointer-events:none}
+.hero-media video{width:100%;height:100%;object-fit:cover;display:block}
+.hero-titles{
+  position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);
+  display:flex;justify-content:center;align-items:center;gap:.45em;
+  z-index:3;pointer-events:none;direction:ltr;
+}
+.hero-word{
+  font-family:var(--font-serif);font-weight:500;color:var(--ivoire);
+  font-size:clamp(2.7rem,9vw,6.8rem);letter-spacing:.05em;line-height:1;
+  text-shadow:0 4px 40px rgba(20,6,3,.55);will-change:transform;
+}
+.hero-word.wl{transform:translateX(calc(var(--p,0) * -46vw))}
+.hero-word.wr{transform:translateX(calc(var(--p,0) * 46vw))}
+.hero-baseline{
+  position:absolute;left:0;right:0;top:calc(50% + clamp(2.2rem,5.5vw,4.4rem));
+  text-align:center;z-index:3;pointer-events:none;
+  font-family:var(--font-nav);font-size:.72rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(231,228,223,.85);
+  opacity:calc(1 - var(--p,0) * 2.4);
+}
+[dir="rtl"] .hero-baseline{letter-spacing:.1em}
+.hero-hint{
+  position:absolute;bottom:clamp(22px,5vh,44px);left:0;right:0;z-index:4;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-family:var(--font-nav);font-size:.7rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(231,228,223,.75);width:fit-content;margin-inline:auto;padding:8px 14px;
+}
+[dir="rtl"] .hero-hint{letter-spacing:.08em}
+.hero-hint svg{width:16px;height:16px;stroke:var(--chene);animation:hintFloat 2.2s ease-in-out infinite}
+@keyframes hintFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+/* ---------- À propos ---------- */
+#apropos{background:var(--ivoire)}
+.about-grid{display:grid;grid-template-columns:1.05fr .9fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
+.about-text p{margin-top:1.15rem;color:#4a3a2e;max-width:58ch}
+.about-text p strong{color:var(--terracotta);font-weight:600}
+.about-visual{position:relative}
+.about-visual{max-width:360px;margin-inline:auto}
+.about-visual .frame{
+  border-radius:var(--r-media);overflow:hidden;aspect-ratio:548/1000;
+  box-shadow:0 26px 60px rgba(94,34,21,.18);background:var(--noyer);
+}
+.about-visual .frame img,.about-visual .frame video{width:100%;height:100%;object-fit:cover;display:block}
+.about-visual::before{
+  content:"";position:absolute;inset:auto -18px -18px auto;top:-18px;inline-size:70%;
+  border:1px solid rgba(168,137,100,.5);border-radius:var(--r-media);z-index:-1;
+  inset-inline-end:-18px;
+}
+.about-badge{
+  position:absolute;top:-18px;inset-inline-start:-14px;
+  background:var(--epice);color:var(--ivoire);border-radius:18px;
+  padding:16px 24px;box-shadow:0 18px 44px rgba(50,17,11,.35);
+}
+.about-badge .num{font-family:var(--font-serif);font-size:2.1rem;color:var(--chene);line-height:1}
+.about-badge .lbl{font-family:var(--font-nav);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(231,228,223,.8);margin-top:4px}
+.about-more{margin-top:2rem}
+/* Barre de transport vidéo (lecture/pause · progression · temps · son) */
+.v-bar{
+  position:absolute;left:0;right:0;bottom:0;z-index:3;
+  display:flex;align-items:center;gap:9px;padding:28px 12px 12px;
+  background:linear-gradient(180deg,transparent,rgba(20,6,3,.74));
+}
+.v-btn{
+  flex-shrink:0;width:34px;height:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(50,17,11,.5);color:var(--ivoire);
+  border:1px solid rgba(168,137,100,.4);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  transition:background .25s ease,transform .16s cubic-bezier(.23,1,.32,1);
+}
+.v-btn:hover{background:rgba(50,17,11,.82)}
+.v-btn:active{transform:scale(.92)}
+.v-btn:focus-visible{outline:2px solid var(--chene);outline-offset:2px}
+.v-btn svg{width:16px;height:16px}
+#about-play .ic-pause{display:none}
+#about-play.is-playing .ic-play{display:none}
+#about-play.is-playing .ic-pause{display:block}
+.about-sound .ic-on{display:none}
+.about-sound.is-on{background:var(--terracotta);border-color:var(--terracotta)}
+.about-sound.is-on .ic-off{display:none}
+.about-sound.is-on .ic-on{display:block}
+.v-seek{flex:1;height:5px;border-radius:999px;position:relative;cursor:pointer;background:rgba(231,228,223,.28);touch-action:none}
+.v-seek-fill{height:100%;width:0;border-radius:inherit;background:var(--chene);position:relative}
+.v-seek-fill::after{
+  content:"";position:absolute;top:50%;inset-inline-end:0;transform:translate(50%,-50%);
+  width:11px;height:11px;border-radius:50%;background:#C9AE86;box-shadow:0 2px 6px rgba(20,6,3,.5);
+  opacity:0;transition:opacity .2s ease;
+}
+.v-seek:hover .v-seek-fill::after,.v-seek:focus-visible .v-seek-fill::after{opacity:1}
+.v-seek:focus-visible{outline:2px solid var(--chene);outline-offset:3px}
+.v-time{
+  flex-shrink:0;font-family:var(--font-nav);font-size:.7rem;font-weight:500;
+  color:rgba(231,228,223,.9);font-variant-numeric:tabular-nums;min-width:30px;text-align:center;
+}
+.pillars{
+  margin-top:clamp(3.5rem,7vw,5.5rem);display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(1.5rem,4vw,3.5rem);
+}
+.pillar{border-top:1px solid rgba(168,137,100,.5);padding-top:1.4rem}
+.pillar .p-num{font-family:var(--font-serif);font-style:italic;color:var(--chene);font-size:1.15rem}
+.pillar h3{font-size:1.45rem;margin-top:.5rem}
+.pillar p{font-size:.92rem;color:var(--grege);margin-top:.55rem;max-width:34ch}
+
+/* ---------- Compteurs ---------- */
+#chiffres{background:var(--epice);background-image:radial-gradient(110% 90% at 50% -10%,rgba(168,137,100,.14),transparent 60%)}
+.counters{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center}
+.counter .num{font-family:var(--font-serif);font-size:clamp(3.4rem,7.5vw,5.8rem);color:var(--chene);line-height:1;font-weight:500}
+.counter .lbl{font-family:var(--font-nav);font-size:.78rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(231,228,223,.78);margin-top:.9rem}
+[dir="rtl"] .counter .lbl{letter-spacing:.05em}
+.counter + .counter{border-inline-start:1px solid rgba(168,137,100,.25)}
+
+/* ---------- Galerie ---------- */
+#galerie{background:var(--ivoire)}
+.gal-head{display:flex;flex-direction:column;margin-bottom:clamp(2.2rem,5vw,3.6rem)}
+.gal-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+.gal-tab{
+  font-family:var(--font-nav);font-weight:600;font-size:.82rem;letter-spacing:.06em;
+  color:var(--grege);padding:10px 22px;border-radius:999px;
+  border:1px solid rgba(168,137,100,.4);background:transparent;
+  transition:background .25s ease,color .25s ease,border-color .25s ease;
+}
+.gal-tab:hover{color:var(--noyer);border-color:var(--chene)}
+.gal-tab.is-active{background:var(--noyer);color:var(--ivoire);border-color:var(--noyer)}
+.gal-tab:focus-visible{outline:2px solid var(--chene);outline-offset:3px}
+[dir="rtl"] .gal-tab{letter-spacing:.02em}
+.masonry{columns:3;column-gap:18px}
+.gal-item{
+  position:relative;display:block;width:100%;margin-bottom:18px;border-radius:var(--r-media);
+  overflow:hidden;cursor:pointer;break-inside:avoid;padding:0;text-align:inherit;
+}
+.gal-item img{width:100%;height:auto;transition:transform .8s var(--ease)}
+.gal-item .voile{
+  position:absolute;inset:0;display:flex;align-items:flex-end;
+  background:linear-gradient(180deg,rgba(138,46,38,0) 40%,rgba(138,46,38,.72));
+  opacity:0;transition:opacity .5s ease;padding:22px;
+}
+.gal-item .voile span{font-family:var(--font-serif);font-size:1.35rem;color:var(--ivoire);transform:translateY(8px);transition:transform .5s var(--ease)}
+.gal-item:hover img,.gal-item:focus-visible img{transform:scale(1.06)}
+.gal-item:hover .voile,.gal-item:focus-visible .voile{opacity:1}
+.gal-item:hover .voile span{transform:none}
+/* Carte teaser : vignettes moyennes (cadrage cover), la vue « Découvrir » garde le masonry natif */
+.gal-teaser{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal-teaser .gal-item{margin:0;aspect-ratio:4/5;break-inside:auto}
+.gal-teaser .gal-item img{width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.gal-teaser{grid-template-columns:repeat(2,1fr)}}
+
+/* Lightbox */
+#lightbox{
+  position:fixed;inset:0;z-index:360;background:rgba(24,8,5,.93);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s;
+}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox figure{max-width:88vw;max-height:84vh;display:flex;flex-direction:column;gap:14px}
+#lightbox img{max-width:88vw;max-height:76vh;object-fit:contain;border-radius:12px}
+#lightbox figcaption{text-align:center;font-family:var(--font-serif);font-size:1.2rem;color:var(--ivoire)}
+.lb-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:52px;height:52px;border-radius:50%;border:1px solid rgba(168,137,100,.5);
+  display:flex;align-items:center;justify-content:center;color:var(--ivoire);
+  transition:background .3s,border-color .3s;
+}
+.lb-btn:hover{background:rgba(168,137,100,.2);border-color:var(--chene)}
+.lb-btn svg{width:20px;height:20px}
+.lb-prev{left:clamp(10px,3vw,36px)}
+.lb-next{right:clamp(10px,3vw,36px)}
+.lb-close{position:absolute;top:22px;right:26px;width:48px;height:48px;border-radius:50%;color:var(--ivoire);font-size:1.5rem;border:1px solid rgba(168,137,100,.4);transition:background .3s}
+.lb-close:hover{background:rgba(168,137,100,.2)}
+
+/* ---------- Avant / Après ---------- */
+#realisations{background:var(--ivoire-2)}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.2rem);margin-top:clamp(2.2rem,5vw,3.4rem)}
+.ba-card h3{font-size:1.4rem;margin-top:1.1rem}
+.ba-card .loc{font-family:var(--font-nav);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grege);margin-top:.3rem}
+[dir="rtl"] .ba-card .loc{letter-spacing:.04em}
+.ba-wrap{
+  position:relative;aspect-ratio:4/5;border-radius:var(--r-media);overflow:hidden;
+  background:rgba(154,136,109,.14);
+  box-shadow:0 20px 50px rgba(94,34,21,.16);
+  direction:ltr;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize;
+  --pos:50%;
+}
+.ba-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba-before{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:var(--chene);transform:translateX(-1px);box-shadow:0 0 18px rgba(0,0,0,.35)}
+.ba-knob{
+  position:absolute;top:50%;left:var(--pos);transform:translate(-50%,-50%);
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,#C9AE86,var(--chene));
+  display:flex;align-items:center;justify-content:center;gap:3px;
+  box-shadow:0 8px 24px rgba(20,6,3,.45);color:var(--noyer);
+}
+.ba-knob svg{width:11px;height:11px}
+.ba-label{
+  position:absolute;top:14px;font-family:var(--font-nav);font-size:.66rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ivoire);
+  background:rgba(50,17,11,.6);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+  padding:5px 12px;border-radius:999px;pointer-events:none;
+}
+.ba-label.lab-before{left:14px}
+.ba-label.lab-after{right:14px}
+.ba-wrap:focus-visible{outline:2px solid var(--chene);outline-offset:4px}
+
+/* ---------- Le Design Manifesté (fond simple, texte à gauche, slider à droite) ---------- */
+#design-manifeste{background:var(--ivoire-2)}
+.d3-split{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.ba-split{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.section-desc{color:#4a3a2e;max-width:52ch;margin-top:1rem;font-size:.98rem}
+.discover-row.start{justify-content:flex-start}
+@media (max-width:900px){
+  .d3-split,.ba-split{grid-template-columns:1fr;gap:2.2rem}
+  .ba-split .ba-text{order:-1}
+  #design-manifeste{background-size:170% auto}
+}
+
+/* ---------- Grilles de sliders (grands, ratio natif de l'image après) ---------- */
+.slider-grid{display:grid;grid-template-columns:1fr;gap:clamp(2rem,4.5vw,3.2rem);margin-top:clamp(2.2rem,5vw,3.4rem)}
+.slider-grid .ba-wrap{width:100%;aspect-ratio:auto}
+.slider-grid .ba-wrap.portrait{width:min(620px,100%);justify-self:center}
+.slider-grid.duo{grid-template-columns:repeat(2,1fr);align-items:start}
+.slider-grid.trio{grid-template-columns:repeat(2,1fr)}
+.slider-grid.trio .ba-wrap:first-child{grid-column:1/-1}
+@media (max-width:900px){.slider-grid.duo,.slider-grid.trio{grid-template-columns:1fr}}
+[dir="rtl"] .ba-label{letter-spacing:.04em}
+
+/* ---------- Bouton Découvrir ---------- */
+.discover-row{display:flex;justify-content:center;margin-top:clamp(2rem,4vw,2.8rem)}
+.btn-discover{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-nav);font-weight:600;font-size:.88rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--noyer);border:1px solid rgba(94,34,21,.45);border-radius:999px;
+  padding:15px 30px;background:transparent;
+  transition:background .25s ease,color .25s ease,border-color .25s ease,transform .16s cubic-bezier(.23,1,.32,1);
+}
+.btn-discover:hover{background:var(--noyer);color:var(--ivoire);border-color:var(--noyer)}
+.btn-discover:active{transform:scale(.97)}
+.btn-discover:focus-visible{outline:2px solid var(--chene);outline-offset:3px}
+.btn-discover svg{width:15px;height:15px;flex-shrink:0;transition:transform .25s cubic-bezier(.23,1,.32,1)}
+.btn-discover:hover svg{transform:translateX(4px)}
+[dir="rtl"] .btn-discover{letter-spacing:.02em}
+[dir="rtl"] .btn-discover svg{transform:scaleX(-1)}
+[dir="rtl"] .btn-discover:hover svg{transform:scaleX(-1) translateX(4px)}
+
+/* ---------- Vues plein écran internes ---------- */
+.view{
+  position:fixed;inset:0;z-index:340;background:var(--ivoire);
+  overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+  opacity:0;visibility:hidden;transform:translateY(16px);
+  transition:opacity .22s cubic-bezier(.23,1,.32,1),transform .22s cubic-bezier(.23,1,.32,1),visibility .22s;
+}
+.view.open{
+  opacity:1;visibility:visible;transform:none;
+  transition-duration:.38s,.38s,.38s;
+}
+body.view-open{overflow:hidden;padding-inline-end:var(--sbw,0px)}
+body.view-open #header{padding-inline-end:calc(clamp(18px,4vw,44px) + var(--sbw,0px))}
+.view-bar{
+  position:sticky;top:0;z-index:5;display:flex;align-items:center;
+  padding:14px clamp(18px,4vw,44px);
+  background:rgba(231,228,223,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(168,137,100,.25);
+}
+.view-back{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-nav);font-weight:600;font-size:.84rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--noyer);padding:9px 16px;border-radius:999px;border:1px solid transparent;
+  transition:background .22s ease,border-color .22s ease,transform .16s cubic-bezier(.23,1,.32,1);
+}
+.view-back:hover{background:rgba(168,137,100,.16);border-color:rgba(168,137,100,.4)}
+.view-back:active{transform:scale(.97)}
+.view-back:focus-visible{outline:2px solid var(--chene);outline-offset:3px}
+.view-back svg{width:16px;height:16px;flex-shrink:0}
+[dir="rtl"] .view-back{letter-spacing:.02em}
+[dir="rtl"] .view-back svg{transform:scaleX(-1)}
+.view-inner{padding:clamp(2.2rem,5vw,3.6rem) 0 clamp(4rem,8vw,6rem)}
+.view-head{margin-bottom:clamp(1.8rem,4vw,2.6rem)}
+.view .masonry{margin-top:0}
+.view .slider-grid{margin-top:0}
+.masonry.cols-2{columns:2}
+@media (max-width:560px){.masonry.cols-2{columns:1}}
+@media (prefers-reduced-motion: reduce){.view{transform:none}}
+
+/* ---------- Marques ---------- */
+#marques{background:var(--ivoire)}
+.brands-head{text-align:center;margin-bottom:clamp(2rem,4vw,3rem)}
+.brands-head .section-sub{margin-inline:auto}
+.marquee{
+  overflow:hidden;direction:ltr;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+}
+.marquee-track{display:flex;width:max-content;animation:marquee 30s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee-group{display:flex;align-items:center;gap:clamp(1.6rem,3.5vw,2.6rem);padding-inline-end:clamp(1.6rem,3.5vw,2.6rem)}
+.brand{
+  display:flex;align-items:center;justify-content:center;
+  width:168px;height:88px;flex-shrink:0;padding:0 22px;
+  background:#FFFFFF;border-radius:16px;border:1px solid rgba(168,137,100,.18);
+  box-shadow:0 10px 26px rgba(94,34,21,.07);
+  transition:transform .4s var(--ease),box-shadow .4s ease;
+}
+.brand:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(94,34,21,.13)}
+.brand img{max-height:46px;max-width:100%;width:auto;object-fit:contain;filter:none;opacity:1}
+.brand .brand-name{
+  display:none;font-family:var(--font-nav);font-weight:600;font-size:.98rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--grege);transition:color .4s;white-space:nowrap;
+}
+.brand:hover .brand-name{color:var(--terracotta)}
+.brand.noimg img{display:none}
+.brand.noimg .brand-name{display:block}
+
+/* ---------- Avis clients ---------- */
+#avis{background:var(--ivoire-2)}
+.rev-head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.rev-rating{display:flex;align-items:center;gap:12px;margin-top:1.2rem;font-family:var(--font-nav)}
+.rev-rating .stars{display:flex;gap:3px}
+.rev-rating .stars svg{width:17px;height:17px;fill:var(--chene)}
+.rev-rating .score{font-family:var(--font-serif);font-size:1.5rem;color:var(--noyer)}
+.rev-rating .src{font-size:.78rem;color:var(--grege);letter-spacing:.08em}
+.t-columns{
+  display:flex;gap:1.4rem;max-height:740px;overflow:hidden;
+  margin-top:clamp(2.4rem,5vw,3.6rem);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 25%,#000 75%,transparent);
+  mask-image:linear-gradient(to bottom,transparent,#000 25%,#000 75%,transparent);
+}
+.t-col{flex:1;display:flex;flex-direction:column;animation:tScroll var(--dur,17s) linear infinite}
+.t-col:hover{animation-play-state:paused}
+@keyframes tScroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.t-stack{display:flex;flex-direction:column;gap:1.4rem;padding-bottom:1.4rem}
+.t-card{
+  background:var(--carte);border-radius:var(--r-card);padding:1.7rem;
+  box-shadow:0 14px 34px rgba(138,46,38,.09);border:1px solid rgba(168,137,100,.16);
+}
+.t-card p{font-size:.93rem;color:#43332a}
+.t-stars{display:flex;gap:3px;margin-bottom:.85rem}
+.t-stars svg{width:15px;height:15px;fill:var(--chene)}
+.t-card .who{display:flex;align-items:center;gap:12px;margin-top:1.2rem}
+.t-card .avatar{
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-nav);font-weight:600;font-size:.85rem;color:var(--ivoire);letter-spacing:.05em;
+}
+.t-card .who .name{font-family:var(--font-nav);font-weight:600;font-size:.88rem;color:var(--noyer);line-height:1.3}
+.t-card .who .role{font-size:.76rem;color:var(--grege)}
+.av-1{background:var(--terracotta)}.av-2{background:var(--chene)}.av-3{background:var(--epice)}.av-4{background:var(--grege)}
+
+/* ---------- Contact / RDV ---------- */
+#contact{
+  background:var(--noyer);color:var(--ivoire);
+  background-image:radial-gradient(110% 80% at 15% 0%,rgba(138,46,38,.22),transparent 55%),radial-gradient(90% 70% at 90% 100%,rgba(168,137,100,.12),transparent 60%);
+}
+#contact .section-title{color:var(--ivoire)}
+#contact .eyebrow{color:var(--chene)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
+.contact-left .section-sub{color:rgba(231,228,223,.66)}
+.cta-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:2.2rem}
+.btn-wa{
+  display:inline-flex;align-items:center;gap:12px;
+  background:linear-gradient(135deg,#C9AE86,var(--chene));color:var(--noyer);
+  font-family:var(--font-nav);font-weight:700;font-size:.95rem;letter-spacing:.04em;
+  padding:17px 32px;border-radius:999px;
+  box-shadow:0 14px 36px rgba(168,137,100,.28);
+  transition:transform .35s var(--ease),box-shadow .35s;
+}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(168,137,100,.4)}
+.btn-wa:active{transform:scale(.98)}
+.btn-wa svg{width:21px;height:21px;flex-shrink:0}
+.btn-call{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid rgba(231,228,223,.4);color:var(--ivoire);
+  font-family:var(--font-nav);font-weight:600;font-size:.92rem;
+  padding:16px 28px;border-radius:999px;transition:border-color .3s,background .3s;
+}
+.btn-call:hover{border-color:var(--chene);background:rgba(168,137,100,.12)}
+.btn-call svg{width:17px;height:17px}
+.info-list{display:flex;flex-direction:column}
+.info-item{padding:1.15rem 0;border-bottom:1px solid rgba(168,137,100,.22);display:flex;gap:16px;align-items:flex-start}
+.info-item:first-child{padding-top:0}
+.info-item svg{width:19px;height:19px;stroke:var(--chene);flex-shrink:0;margin-top:4px}
+.info-item .k{font-family:var(--font-nav);font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--chene);margin-bottom:4px}
+[dir="rtl"] .info-item .k{letter-spacing:.05em}
+.info-item .v{font-size:.94rem;color:rgba(231,228,223,.88);line-height:1.8}
+.info-item .v a:hover{color:var(--chene)}
+.phone-num{direction:ltr;unicode-bidi:embed;display:inline-block}
+.socials{display:flex;gap:12px;margin-top:2px}
+.socials a{
+  width:42px;height:42px;border-radius:50%;border:1px solid rgba(168,137,100,.4);
+  display:flex;align-items:center;justify-content:center;transition:background .3s,border-color .3s;
+}
+.socials a:hover{background:rgba(168,137,100,.18);border-color:var(--chene)}
+.socials svg{width:17px;height:17px;fill:var(--ivoire)}
+.map-wrap{
+  margin-top:clamp(2.8rem,6vw,4.2rem);border-radius:var(--r-media);overflow:hidden;
+  border:1px solid rgba(168,137,100,.3);line-height:0;
+}
+.map-wrap iframe{width:100%;height:clamp(320px,46vh,440px);border:0;filter:grayscale(.25) sepia(.12)}
+
+/* ---------- Footer ---------- */
+footer{background:#230C06;color:rgba(231,228,223,.75);padding:clamp(3.5rem,7vw,5rem) 0 2rem;text-align:center}
+.foot-logo{display:flex;flex-direction:column;align-items:center;gap:16px}
+.foot-logo img{width:64px;height:64px;border-radius:12px;object-fit:cover}
+.foot-logo .mono-fallback{
+  display:none;width:64px;height:64px;border-radius:12px;border:1px solid rgba(168,137,100,.5);
+  font-family:var(--font-serif);font-size:1.6rem;color:var(--chene);align-items:center;justify-content:center;
+}
+.foot-logo.noimg img{display:none}
+.foot-logo.noimg .mono-fallback{display:flex}
+.foot-logo .fw{font-family:var(--font-serif);font-size:1.4rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ivoire)}
+.foot-baseline{font-family:var(--font-serif);font-style:italic;font-size:1.05rem;color:var(--chene);margin-top:.7rem}
+.foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 30px;margin:2.2rem 0;font-family:var(--font-nav);font-size:.82rem;letter-spacing:.06em}
+.foot-nav a:hover{color:var(--chene)}
+.foot-contact{font-size:.85rem;line-height:2}
+.foot-contact a:hover{color:var(--chene)}
+footer .socials{justify-content:center;margin-top:1.6rem}
+.foot-line{border:none;border-top:1px solid rgba(168,137,100,.2);margin:2.2rem auto 1.4rem;width:min(520px,80%)}
+.foot-copy{font-size:.76rem;color:rgba(231,228,223,.45);font-family:var(--font-nav)}
+
+/* ---------- WhatsApp flottant ---------- */
+#wa-float{
+  position:fixed;bottom:22px;inset-inline-end:22px;z-index:150;
+  width:54px;height:54px;border-radius:50%;background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 30px rgba(20,60,30,.4);
+  transition:transform .35s var(--ease),box-shadow .35s;
+}
+#wa-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 16px 38px rgba(20,60,30,.5)}
+#wa-float svg{width:27px;height:27px;fill:#fff}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .masonry{columns:2}
+  .t-col:nth-child(3){display:none}
+}
+@media (max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .about-visual{max-width:300px;margin-inline:auto}
+  .contact-grid{grid-template-columns:1fr}
+  .ba-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}
+  .pillars{grid-template-columns:1fr;gap:1.8rem}
+}
+@media (max-width:768px){
+  .t-col:nth-child(2){display:none}
+  .counters{grid-template-columns:1fr;gap:2.6rem}
+  .counter + .counter{border-inline-start:none;border-top:1px solid rgba(168,137,100,.25);padding-top:2.4rem}
+  .brandmark .wordmark{display:none}
+}
+@media (max-width:560px){
+  .masonry{columns:1}
+  .menu-inner{padding-top:96px}
+}
+
+/* ---------- Mouvement réduit ---------- */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .reveal{opacity:1;transform:none}
+  .marquee-track{animation:none;width:100%;flex-wrap:wrap;justify-content:center}
+  .marquee{mask-image:none;-webkit-mask-image:none}
+  .marquee-group[aria-hidden="true"]{display:none}
+  .t-columns{max-height:none;mask-image:none;-webkit-mask-image:none}
+  .t-col{animation:none}
+  .hero-hint{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Écran de chargement (mode canvas) -->
+<div id="loader" aria-hidden="true">
+  <img class="loader-logo" src="assets/logo.png?v=2" alt="" onerror="this.closest('#loader').classList.add('noimg')">
+  <span class="loader-mono">CF</span>
+  <span class="loader-name">Cuisines Factory</span>
+  <span class="loader-bar"><span class="loader-fill" id="loader-fill"></span></span>
+</div>
+
+<!-- Header -->
+<header id="header">
+  <a href="#hero" class="brandmark" id="brandmark" aria-label="Cuisines Factory">
+    <img src="assets/logo.png?v=2" alt="Logo Cuisines Factory" onerror="document.querySelectorAll('.brandmark,.foot-logo').forEach(function(e){e.classList.add('noimg')})">
+    <span class="mono-fallback" aria-hidden="true">CF</span>
+    <span class="wordmark">Cuisines Factory</span>
+  </a>
+  <nav class="desktop-nav" aria-label="Navigation principale">
+    <a href="#apropos" data-i18n="hnav_apropos">Notre maison</a>
+    <a href="#galerie" data-i18n="hnav_galerie">Galerie</a>
+    <a href="#realisations" data-i18n="hnav_realisations">Nos avant-après</a>
+    <a href="#marques" data-i18n="hnav_marques">Nos marques</a>
+    <a href="#avis" data-i18n="hnav_avis">Avis</a>
+    <a href="#contact" data-i18n="hnav_contact">Contact</a>
+  </nav>
+  <div class="header-right">
+    <nav class="lang-switch" aria-label="Langue">
+      <button class="lang-btn active" data-lang="fr">FR</button><span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ar">AR</button><span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </nav>
+    <button id="burger" data-i18n-aria="aria_menu" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Menu plein écran -->
+<div id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-inner">
+    <nav class="menu-nav">
+      <a href="#apropos" data-i18n="nav_apropos">À propos</a>
+      <a href="#galerie" data-i18n="nav_galerie">Galerie</a>
+      <a href="#realisations" data-i18n="nav_realisations">Avant / Après</a>
+      <a href="#marques" data-i18n="nav_marques">Nos marques</a>
+      <a href="#avis" data-i18n="nav_avis">Avis clients</a>
+      <a href="#contact" data-i18n="nav_contact">Rendez-vous</a>
+    </nav>
+    <div class="menu-foot">
+      <div class="blk">
+        <strong data-i18n="menu_addr_k">Adresse</strong>
+        <span data-i18n="ct_addr">371 Rue Erfoud, secteur 3 Ryad Oulad Mtaa, Témara 12000</span>
+      </div>
+      <div class="blk">
+        <strong data-i18n="menu_tel_k">Téléphone</strong>
+        <a href="tel:+212623230649"><span class="phone-num">06 23 23 06 49</span></a><br>
+        <a href="tel:+212530265290"><span class="phone-num">05 30 26 52 90</span></a>
+      </div>
+      <div class="blk">
+        <strong data-i18n="menu_social_k">Réseaux</strong>
+        <a href="https://www.instagram.com/cuisinesfactory" target="_blank" rel="noopener">Instagram</a><br>
+        <a href="https://web.facebook.com/people/Cuisines-factory/61556800963354/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <div class="menu-lang">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 1 · Hero scroll-expansion (vidéo qui grandit) -->
+<section id="hero" style="--p:0">
+  <div class="hero-bg" id="hero-bg" style="background-image:url('images/galerie-realisation/16.jpg')"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-media" id="hero-media">
+    <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-debut-poster-4k.jpg?v=5" aria-label="Cuisines Factory">
+      <source src="assets/hero-debut-4k.mp4?v=5" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-titles">
+    <h1 style="display:contents">
+      <span class="hero-word wl">CUISINES</span>
+      <span class="hero-word wr">FACTORY</span>
+    </h1>
+  </div>
+  <p class="hero-baseline" data-i18n="hero_baseline">Cuisines sur mesure haut de gamme · Rabat &amp; Témara</p>
+  <button class="hero-hint" id="hero-hint">
+    <span data-i18n="hero_hint">Défiler pour découvrir</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+</section>
+
+<!-- 3 · À propos -->
+<section id="apropos" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow" data-i18n="about_eyebrow">Notre maison</span>
+        <h2 class="section-title" data-i18n="about_title">L'art de la cuisine sur mesure</h2>
+        <p data-i18n="about_p1">Cuisines Factory est né d'une conviction : une cuisine d'exception se dessine autour de celles et ceux qui la vivent. Dans notre atelier de Témara, chaque projet est conçu, fabriqué et posé sur mesure, du premier trait de crayon à la dernière poignée.</p>
+        <p data-i18n="about_p2">Forts de plus de 20 ans d'expérience acquise en Suisse, nous rapportons au Maroc une exigence helvétique : précision millimétrée, quincaillerie allemande, matières nobles. Céramique, quartz et granit composent des pièces pensées pour durer.</p>
+        <p data-i18n="about_p3">Notre accompagnement couvre tout le parcours : conception 3D réaliste pour visualiser votre projet, fabrication dans nos ateliers, pose soignée par nos équipes. Plus de 500 réalisations au Maroc en témoignent.</p>
+        <a class="btn-discover about-more" href="notre-maison.html?v=2" target="_blank" rel="noopener">
+          <span data-i18n="about_more">En savoir plus sur nous</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+      <div class="about-visual reveal">
+        <div class="frame">
+          <video id="about-video" muted loop playsinline preload="metadata" poster="assets/notre-maison-poster.jpg?v=3" width="562" height="1000" aria-label="Cuisine sur mesure réalisée par Cuisines Factory"></video>
+          <div class="v-bar" role="group" aria-label="Lecture vidéo">
+            <button class="v-btn" id="about-play" type="button" data-i18n-aria="v_play" aria-label="Lecture">
+              <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>
+            </button>
+            <div class="v-seek" id="about-seek" role="slider" tabindex="0" data-i18n-aria="v_seek" aria-label="Progression de la vidéo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="v-seek-fill" id="about-seek-fill"></div>
+            </div>
+            <span class="v-time" id="about-time">0:00</span>
+            <button class="v-btn about-sound" id="about-sound" type="button" aria-pressed="false" data-i18n-aria="sound_on" aria-label="Activer le son">
+              <svg class="ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
+              <svg class="ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="about-badge">
+          <div class="num">+500</div>
+          <div class="lbl" data-i18n="about_badge">Réalisations au Maroc</div>
+        </div>
+      </div>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <span class="p-num">I</span>
+        <h3 data-i18n="pil1_t">Conception 3D</h3>
+        <p data-i18n="pil1_d">Votre cuisine visualisée dans les moindres détails avant fabrication, pour décider sereinement.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="p-num">II</span>
+        <h3 data-i18n="pil2_t">Fabrication sur mesure</h3>
+        <p data-i18n="pil2_d">Matières nobles et quincaillerie européenne, assemblées avec une précision d'atelier.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="p-num">III</span>
+        <h3 data-i18n="pil3_t">Pose &amp; finitions</h3>
+        <p data-i18n="pil3_d">Des équipes dédiées, un chantier propre et des finitions contrôlées au millimètre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · Compteurs -->
+<section id="chiffres" class="section-pad">
+  <div class="container">
+    <div class="counters reveal">
+      <div class="counter">
+        <div class="num"><span data-count="20">0</span><span>+</span></div>
+        <div class="lbl" data-i18n="cnt1">Années d'expérience en Suisse</div>
+      </div>
+      <div class="counter">
+        <div class="num"><span data-count="500">0</span><span>+</span></div>
+        <div class="lbl" data-i18n="cnt2">Projets réalisés</div>
+      </div>
+      <div class="counter">
+        <div class="num"><span data-count="100">0</span><span>%</span></div>
+        <div class="lbl" data-i18n="cnt3">Sur mesure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4bis · Le Design Manifesté -->
+<section id="design-manifeste" class="section-pad">
+  <div class="container">
+    <div class="d3-split">
+      <div class="d3-text reveal">
+        <h2 class="section-title" data-i18n="d3_title">Le Design Manifesté</h2>
+        <p class="section-sub" data-i18n="d3_slogan">Des conceptions 3D devenues réalité</p>
+        <p class="section-desc" data-i18n="d3_desc">De la modélisation numérique à la maîtrise artisanale : l'exactitude de nos rendus devient votre espace de vie.</p>
+        <div class="discover-row start">
+          <button class="btn-discover" type="button" data-view="design-3d">
+            <span data-i18n="btn_discover">Découvrir</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="reveal" id="d3-card"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Galerie -->
+<section id="galerie" class="section-pad">
+  <div class="container">
+    <div class="gal-head reveal">
+      <h2 class="section-title" data-i18n="gal_title">Galerie de réalisations</h2>
+      <p class="section-sub" data-i18n="gal_sub">Un aperçu de nos cuisines livrées à Rabat, Témara et leurs environs.</p>
+    </div>
+    <div class="gal-teaser reveal" id="gal-card"></div>
+    <div class="discover-row reveal">
+      <button class="btn-discover" type="button" data-view="galerie-complete">
+        <span data-i18n="btn_discover">Découvrir</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie plein écran">
+  <figure>
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button class="lb-btn lb-prev" data-i18n-aria="aria_prev" aria-label="Image précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="lb-btn lb-next" data-i18n-aria="aria_next" aria-label="Image suivante">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <button class="lb-close" data-i18n-aria="aria_close" aria-label="Fermer">&#10005;</button>
+</div>
+
+<!-- 6 · Avant / Après -->
+<section id="realisations" class="section-pad">
+  <div class="container">
+    <div class="ba-split">
+      <div class="reveal" id="ba-card"></div>
+      <div class="ba-text reveal">
+        <span class="eyebrow" data-i18n="ba_eyebrow">Nos avant-après</span>
+        <h2 class="section-title" data-i18n="ba_title">Avant / Après</h2>
+        <p class="section-sub" data-i18n="ba_sub">Faites glisser le curseur pour découvrir la transformation.</p>
+        <p class="section-desc" data-i18n="ba_p">Un même lieu, deux vies. De l'existant au sur mesure, nous transformons chaque espace en une pièce lumineuse, fonctionnelle et durable.</p>
+        <div class="discover-row start">
+          <button class="btn-discover" type="button" data-view="avant-apres">
+            <span data-i18n="btn_discover">Découvrir</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Marques partenaires -->
+<section id="marques" class="section-pad">
+  <div class="container brands-head reveal">
+    <h2 class="section-title" data-i18n="brands_title">Ils nous font confiance</h2>
+    <p class="section-sub" data-i18n="brands_sub">Nos marques partenaires, sélectionnées pour leur excellence.</p>
+  </div>
+  <div class="marquee reveal">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span class="brand"><img src="assets/marques/gessi.jpg" alt="Gessi" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Gessi</span></span>
+        <span class="brand"><img src="assets/marques/blum.jpg" alt="Blum" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Blum</span></span>
+        <span class="brand"><img src="assets/marques/blanco.jpg" alt="Blanco" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Blanco</span></span>
+        <span class="brand"><img src="assets/marques/bosch.jpg" alt="Bosch" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Bosch</span></span>
+        <span class="brand"><img src="assets/marques/liebherr.jpg" alt="Liebherr" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Liebherr</span></span>
+        <span class="brand"><img src="assets/marques/asko.jpg" alt="Asko" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Asko</span></span>
+        <span class="brand"><img src="assets/marques/gorenje.jpg" alt="Gorenje" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Gorenje</span></span>
+        <span class="brand"><img src="assets/marques/dekton.jpg" alt="Dekton" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Dekton</span></span>
+        <span class="brand"><img src="assets/marques/alvic.jpg" alt="Alvic" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Alvic</span></span>
+        <span class="brand"><img src="assets/marques/kronotex.jpg" alt="Kronotex" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Kronotex</span></span>
+        <span class="brand"><img src="assets/marques/inoxa.jpg" alt="Inoxa" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Inoxa</span></span>
+        <span class="brand"><img src="assets/marques/goslar.jpg" alt="Göslar Systems" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Göslar</span></span>
+      </div>
+      <div class="marquee-group" aria-hidden="true">
+        <span class="brand"><img src="assets/marques/gessi.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Gessi</span></span>
+        <span class="brand"><img src="assets/marques/blum.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Blum</span></span>
+        <span class="brand"><img src="assets/marques/blanco.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Blanco</span></span>
+        <span class="brand"><img src="assets/marques/bosch.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Bosch</span></span>
+        <span class="brand"><img src="assets/marques/liebherr.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Liebherr</span></span>
+        <span class="brand"><img src="assets/marques/asko.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Asko</span></span>
+        <span class="brand"><img src="assets/marques/gorenje.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Gorenje</span></span>
+        <span class="brand"><img src="assets/marques/dekton.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Dekton</span></span>
+        <span class="brand"><img src="assets/marques/alvic.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Alvic</span></span>
+        <span class="brand"><img src="assets/marques/kronotex.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Kronotex</span></span>
+        <span class="brand"><img src="assets/marques/inoxa.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Inoxa</span></span>
+        <span class="brand"><img src="assets/marques/goslar.jpg" alt="" onerror="this.parentNode.classList.add('noimg')"><span class="brand-name">Göslar</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · Avis clients -->
+<section id="avis" class="section-pad">
+  <div class="container">
+    <div class="rev-head reveal">
+      <h2 class="section-title" data-i18n="rev_title">Ce que disent nos clients</h2>
+      <div class="rev-rating">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg>
+        </span>
+        <span class="score">4,9/5</span>
+        <span class="src" data-i18n="rev_src">Note Google</span>
+      </div>
+    </div>
+    <div class="t-columns reveal">
+      <div class="t-col" style="--dur:15s">
+        <div class="t-stack">
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r1">Fort de leur expérience à l'étranger, ils créent des espaces culinaires exceptionnels alliant design élégant et savoir-faire artisanal. L'excellence dans chaque détail.</p>
+            <div class="who"><span class="avatar av-1" aria-hidden="true">MB</span><span class="name">M. Belgassem</span></div>
+          </div>
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r2">Un grand merci Tarik d'avoir conçu la cuisine de mes rêves. À la fois élégante et fonctionnelle, c'est exactement ce que je voulais. Je recommande à 100 % !</p>
+            <div class="who"><span class="avatar av-2" aria-hidden="true">HE</span><span class="name">Hajar EL.</span></div>
+          </div>
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r3">En plus du design magnifique, un accompagnement professionnel du début à la fin. Je recommande à ceux qui veulent de la qualité sans prise de tête.</p>
+            <div class="who"><span class="avatar av-3" aria-hidden="true">SB</span><span class="name">Soufyen Ben Harzallah</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="t-col" style="--dur:19s">
+        <div class="t-stack">
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r4">Très satisfaite de ma nouvelle cuisine ! La qualité des matériaux est excellente et les finitions vraiment soignées. Une équipe à l'écoute et attentive. Je recommande vivement !</p>
+            <div class="who"><span class="avatar av-4" aria-hidden="true">OA</span><span class="name">Ouidiane Al Ansari</span></div>
+          </div>
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r5">J'ai fait appel à Cuisines Factory pour ma cuisine sur mesure, ravi du résultat ! Matériaux de haute qualité, finitions impeccables, pose dans les temps. Tarek a su optimiser l'espace en respectant mes goûts et mon budget.</p>
+            <div class="who"><span class="avatar av-1" aria-hidden="true">L</span><span class="name">Layl</span></div>
+          </div>
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r6">Je remercie M. Tarik pour son professionnalisme et son sérieux. Il a su me conseiller dans le choix des matériaux et le cahier des charges a été scrupuleusement respecté. Je recommande les yeux fermés.</p>
+            <div class="who"><span class="avatar av-2" aria-hidden="true">SL</span><span class="name">Samira Ladjali</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="t-col" style="--dur:17s">
+        <div class="t-stack">
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r7">10/10. Bravo à Si Tarik pour son dévouement et sa créativité : il a encadré le projet de A à Z. Nous étions pressés, il a relevé le challenge, toujours joignable pour un conseil. Mes convives me complimentent à chaque événement.</p>
+            <div class="who"><span class="avatar av-3" aria-hidden="true">SB</span><span class="name">Sylvain Bouallaga</span></div>
+          </div>
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r8">Magasin et cuisines de très bonne qualité, exceptionnel. À venir visiter pour vos projets de déco.</p>
+            <div class="who"><span class="avatar av-4" aria-hidden="true">SD</span><span class="name">Stéphane Depuille</span></div>
+          </div>
+          <div class="t-card">
+            <span class="t-stars" aria-label="Note 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56z"/></svg></span>
+            <p data-i18n="r9">Je remercie Tarik pour son professionnalisme tout au long du projet : à l'écoute, réactif et de bon conseil. Des produits de grande qualité, esthétiques et fonctionnels. Je recommande vivement.</p>
+            <div class="who"><span class="avatar av-1" aria-hidden="true">AB</span><span class="name">Aymène Bousekri</span></div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- 9 & 10 · Rendez-vous / WhatsApp + carte -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <span class="eyebrow" data-i18n="ct_eyebrow">Votre projet commence ici</span>
+        <h2 class="section-title" data-i18n="ct_title">Prenez rendez-vous</h2>
+        <p class="section-sub" data-i18n="ct_sub">Parlez-nous de votre projet : nous vous recevons à l'atelier ou nous nous déplaçons chez vous pour la prise de mesures.</p>
+        <div class="cta-row">
+          <a class="btn-wa" data-wa href="https://wa.me/212623230649" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-i18n="ct_wa">Réserver sur WhatsApp</span>
+          </a>
+          <a class="btn-call" href="tel:+212623230649">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span data-i18n="ct_call">Appeler l'atelier</span>
+          </a>
+        </div>
+      </div>
+      <div class="info-list reveal">
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <div><div class="k" data-i18n="ct_tel_k">Téléphone</div>
+          <div class="v"><a href="tel:+212623230649"><span class="phone-num">06 23 23 06 49</span></a><br><a href="tel:+212530265290"><span class="phone-num">05 30 26 52 90</span></a></div></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><div class="k" data-i18n="ct_addr_k">Adresse</div>
+          <div class="v" data-i18n="ct_addr">371 Rue Erfoud, secteur 3 Ryad Oulad Mtaa, Témara 12000</div></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><div class="k" data-i18n="ct_hours_k">Horaires</div>
+          <div class="v"><span data-i18n="ct_hours1">Lundi au samedi : 9h00 · 19h00</span><br><span data-i18n="ct_hours2">Dimanche : sur rendez-vous</span></div></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2H7a5 5 0 00-5 5v10a5 5 0 005 5h10a5 5 0 005-5V7a5 5 0 00-5-5z"/><circle cx="12" cy="12" r="4"/></svg>
+          <div><div class="k" data-i18n="ct_social_k">Réseaux sociaux</div>
+          <div class="socials">
+            <a href="https://www.instagram.com/cuisinesfactory" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://web.facebook.com/people/Cuisines-factory/61556800963354/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.0951375410386!2d-6.8916113!3d33.9386811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7139c9c452307%3A0xfe8e7ab422a75150!2sCuisines%20Factory!5e0!3m2!1sfr!2sma!4v1783385480682!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Cuisines Factory sur Google Maps"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-logo">
+      <img src="assets/logo.png?v=2" alt="Logo Cuisines Factory">
+      <span class="mono-fallback" aria-hidden="true">CF</span>
+      <span class="fw">Cuisines Factory</span>
+    </div>
+    <p class="foot-baseline" data-i18n="ft_baseline">Matières nobles · Savoir-faire · Intemporel</p>
+    <nav class="foot-nav">
+      <a href="#apropos" data-i18n="nav_apropos">À propos</a>
+      <a href="#galerie" data-i18n="nav_galerie">Galerie</a>
+      <a href="#realisations" data-i18n="nav_realisations">Avant / Après</a>
+      <a href="#marques" data-i18n="nav_marques">Nos marques</a>
+      <a href="#avis" data-i18n="nav_avis">Avis clients</a>
+      <a href="#contact" data-i18n="nav_contact">Rendez-vous</a>
+    </nav>
+    <div class="foot-contact">
+      <span data-i18n="ct_addr">371 Rue Erfoud, secteur 3 Ryad Oulad Mtaa, Témara 12000</span><br>
+      <a href="tel:+212623230649"><span class="phone-num">06 23 23 06 49</span></a> · <a href="tel:+212530265290"><span class="phone-num">05 30 26 52 90</span></a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/cuisinesfactory" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="https://web.facebook.com/people/Cuisines-factory/61556800963354/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+    <hr class="foot-line">
+    <p class="foot-copy">© 2026 Cuisines Factory · Kitchen &amp; Bath Contractor</p>
+  </div>
+</footer>
+
+<!-- WhatsApp flottant -->
+<a id="wa-float" data-wa href="https://wa.me/212623230649" target="_blank" rel="noopener" data-i18n-aria="aria_wa" aria-label="Nous écrire sur WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Vues plein ecran internes (meme page, meme onglet) -->
+<section class="view" id="design-3d" role="dialog" aria-modal="true" aria-labelledby="vt-d3" tabindex="-1">
+  <div class="view-bar">
+    <button class="view-back" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      <span data-i18n="btn_back">Retour</span>
+    </button>
+  </div>
+  <div class="container view-inner">
+    <header class="view-head">
+      <h2 class="section-title" id="vt-d3" data-i18n="d3_title">Le Design Manifesté</h2>
+      <p class="section-sub" data-i18n="d3_slogan">Des conceptions 3D devenues réalité</p>
+    </header>
+    <div class="slider-grid duo" id="d3-view"></div>
+  </div>
+</section>
+
+<section class="view" id="galerie-complete" role="dialog" aria-modal="true" aria-labelledby="vt-gal" tabindex="-1">
+  <div class="view-bar">
+    <button class="view-back" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      <span data-i18n="btn_back">Retour</span>
+    </button>
+  </div>
+  <div class="container view-inner">
+    <header class="view-head">
+      <h2 class="section-title" id="vt-gal" data-i18n="gal_title">Galerie de réalisations</h2>
+      <p class="section-sub" data-i18n="gal_sub">Un aperçu de nos cuisines livrées à Rabat, Témara et leurs environs.</p>
+      <div class="gal-tabs" role="tablist" aria-label="Catégories">
+        <button class="gal-tab is-active" type="button" role="tab" aria-selected="true" data-cat="cuisines" data-i18n="gal_cat_cuisines">Cuisines</button>
+        <button class="gal-tab" type="button" role="tab" aria-selected="false" data-cat="vitrines" data-i18n="gal_cat_vitrines">Vitrines &amp; Dressings</button>
+      </div>
+    </header>
+    <div class="masonry" id="gal-view-cuisines" role="tabpanel"></div>
+    <div class="masonry" id="gal-view-vitrines" role="tabpanel" hidden></div>
+  </div>
+</section>
+
+<section class="view" id="avant-apres" role="dialog" aria-modal="true" aria-labelledby="vt-ba" tabindex="-1">
+  <div class="view-bar">
+    <button class="view-back" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      <span data-i18n="btn_back">Retour</span>
+    </button>
+  </div>
+  <div class="container view-inner">
+    <header class="view-head">
+      <h2 class="section-title" id="vt-ba" data-i18n="ba_title">Avant / Après</h2>
+      <p class="section-sub" data-i18n="ba_sub">Faites glisser le curseur pour découvrir la transformation.</p>
+    </header>
+    <div class="slider-grid duo" id="ba-view"></div>
+  </div>
+</section>
+
+<noscript>
+<style>
+  #loader{display:none}
+  .reveal{opacity:1;transform:none}
+  .hero-hint{display:none}
+  #hero-video{display:block !important}
+</style>
+</noscript>
+<script>
+(function(){
+"use strict";
+
+/* ================= i18n ================= */
+const translations = {
+  fr: {
+    meta_title: "Cuisines Factory · Cuisines sur mesure haut de gamme à Témara & Rabat",
+    meta_desc: "Cuisines Factory conçoit, fabrique et pose des cuisines sur mesure haut de gamme à Rabat et Témara. Plus de 20 ans d'expérience en Suisse, conception 3D, matières nobles.",
+    nav_apropos: "À propos", nav_galerie: "Galerie", nav_realisations: "Avant / Après",
+    nav_marques: "Nos marques", nav_avis: "Avis clients", nav_contact: "Rendez-vous",
+    menu_addr_k: "Adresse", menu_tel_k: "Téléphone", menu_social_k: "Réseaux",
+    hnav_apropos: "Notre maison", hnav_galerie: "Galerie", hnav_realisations: "Nos avant-après", hnav_marques: "Nos marques", hnav_avis: "Avis", hnav_contact: "Contact",
+    d3_title: "Le Design Manifesté", d3_slogan: "Des conceptions 3D devenues réalité",
+    d3_desc: "De la modélisation numérique à la maîtrise artisanale : l'exactitude de nos rendus devient votre espace de vie.",
+    btn_discover: "Découvrir", btn_back: "Retour",
+    ba_aria: "Comparateur avant / après : utilisez les flèches pour déplacer le curseur",
+    ba_3d: "Plan 3D",
+    ba_p: "Un même lieu, deux vies. De l'existant au sur mesure, nous transformons chaque espace en une pièce lumineuse, fonctionnelle et durable.",
+    hero_baseline: "Cuisines sur mesure haut de gamme · Rabat & Témara",
+    hero_hint: "Défiler pour découvrir",
+    about_eyebrow: "Notre maison",
+    about_title: "L'art de la cuisine sur mesure",
+    about_p1: "Cuisines Factory est né d'une conviction : une cuisine d'exception se dessine autour de celles et ceux qui la vivent. Dans notre atelier de Témara, chaque projet est conçu, fabriqué et posé sur mesure, du premier trait de crayon à la dernière poignée.",
+    about_p2: "Forts de plus de 20 ans d'expérience acquise en Suisse, nous rapportons au Maroc une exigence helvétique : précision millimétrée, quincaillerie allemande, matières nobles. Céramique, quartz et granit composent des pièces pensées pour durer.",
+    about_p3: "Notre accompagnement couvre tout le parcours : conception 3D réaliste pour visualiser votre projet, fabrication dans nos ateliers, pose soignée par nos équipes. Plus de 500 réalisations au Maroc en témoignent.",
+    about_badge: "Réalisations au Maroc",
+    about_more: "En savoir plus sur nous", sound_on: "Activer le son", sound_off: "Couper le son",
+    v_play: "Lecture", v_pause: "Pause", v_seek: "Progression de la vidéo",
+    pil1_t: "Conception 3D", pil1_d: "Votre cuisine visualisée dans les moindres détails avant fabrication, pour décider sereinement.",
+    pil2_t: "Fabrication sur mesure", pil2_d: "Matières nobles et quincaillerie européenne, assemblées avec une précision d'atelier.",
+    pil3_t: "Pose & finitions", pil3_d: "Des équipes dédiées, un chantier propre et des finitions contrôlées au millimètre.",
+    cnt1: "Années d'expérience en Suisse", cnt2: "Projets réalisés", cnt3: "Sur mesure",
+    gal_title: "Galerie de réalisations",
+    gal_sub: "Un aperçu de nos cuisines et vitrines haut de gamme.",
+    gal_cat_cuisines: "Cuisines", gal_cat_vitrines: "Vitrines & Dressings",
+    g1: "Villa Harhoura", g2: "Penthouse Hay Riad", g3: "Duplex Souissi", g4: "Appartement Agdal",
+    g5: "Villa Témara", g6: "Résidence Prestigia", g7: "Villa Aïn Attig", g8: "Appartement L'Océan",
+    ba_eyebrow: "Nos avant-après", ba_title: "Avant / Après",
+    ba_sub: "Faites glisser le curseur pour découvrir la transformation.",
+    ba_before: "Avant", ba_after: "Après",
+    ba_c1: "Rénovation complète", ba_l1: "Villa · Harhoura",
+    ba_c2: "Cuisine ouverte sur séjour", ba_l2: "Appartement · Hay Riad",
+    ba_c3: "Salle de bain marbre", ba_l3: "Villa · Témara",
+    brands_title: "Ils nous font confiance",
+    brands_sub: "Nos marques partenaires, sélectionnées pour leur excellence.",
+    rev_title: "Ce que disent nos clients", rev_src: "Note Google",
+    r1: "Fort de leur expérience à l'étranger, ils créent des espaces culinaires exceptionnels alliant design élégant et savoir-faire artisanal. L'excellence dans chaque détail.",
+    r2: "Un grand merci Tarik d'avoir conçu la cuisine de mes rêves. À la fois élégante et fonctionnelle, c'est exactement ce que je voulais. Je recommande à 100 % !",
+    r3: "En plus du design magnifique, un accompagnement professionnel du début à la fin. Je recommande à ceux qui veulent de la qualité sans prise de tête.",
+    r4: "Très satisfaite de ma nouvelle cuisine ! La qualité des matériaux est excellente et les finitions vraiment soignées. Une équipe à l'écoute et attentive. Je recommande vivement !",
+    r5: "J'ai fait appel à Cuisines Factory pour ma cuisine sur mesure, ravi du résultat ! Matériaux de haute qualité, finitions impeccables, pose dans les temps. Tarek a su optimiser l'espace en respectant mes goûts et mon budget.",
+    r6: "Je remercie M. Tarik pour son professionnalisme et son sérieux. Il a su me conseiller dans le choix des matériaux et le cahier des charges a été scrupuleusement respecté. Je recommande les yeux fermés.",
+    r7: "10/10. Bravo à Si Tarik pour son dévouement et sa créativité : il a encadré le projet de A à Z. Nous étions pressés, il a relevé le challenge, toujours joignable pour un conseil. Mes convives me complimentent à chaque événement.",
+    r8: "Magasin et cuisines de très bonne qualité, exceptionnel. À venir visiter pour vos projets de déco.",
+    r9: "Je remercie Tarik pour son professionnalisme tout au long du projet : à l'écoute, réactif et de bon conseil. Des produits de grande qualité, esthétiques et fonctionnels. Je recommande vivement.",
+    ct_eyebrow: "Votre projet commence ici", ct_title: "Prenez rendez-vous",
+    ct_sub: "Parlez-nous de votre projet : nous vous recevons à l'atelier ou nous nous déplaçons chez vous pour la prise de mesures.",
+    ct_wa: "Réserver sur WhatsApp", ct_call: "Appeler l'atelier",
+    ct_tel_k: "Téléphone", ct_addr_k: "Adresse", ct_hours_k: "Horaires", ct_social_k: "Réseaux sociaux",
+    ct_addr: "371 Rue Erfoud, secteur 3 Ryad Oulad Mtaa, Témara 12000",
+    ct_hours1: "Lundi au samedi : 9h00 à 19h00", ct_hours2: "Dimanche : sur rendez-vous",
+    ft_baseline: "Matières nobles · Savoir-faire · Intemporel",
+    aria_menu: "Ouvrir le menu", aria_prev: "Image précédente", aria_next: "Image suivante",
+    aria_close: "Fermer", aria_wa: "Nous écrire sur WhatsApp",
+    wa_msg: "Bonjour Cuisines Factory, je souhaite prendre rendez-vous pour un projet de cuisine sur mesure."
+  },
+  ar: {
+    meta_title: "كوزين فاكتوري · مطابخ راقية مصممة حسب الطلب بتمارة والرباط",
+    meta_desc: "كوزين فاكتوري تصمم وتصنع وتركب مطابخ راقية حسب الطلب في الرباط وتمارة. أكثر من 20 سنة من الخبرة في سويسرا، تصميم ثلاثي الأبعاد وخامات نبيلة.",
+    nav_apropos: "من نحن", nav_galerie: "المعرض", nav_realisations: "قبل / بعد",
+    nav_marques: "علاماتنا الشريكة", nav_avis: "آراء العملاء", nav_contact: "حجز موعد",
+    menu_addr_k: "العنوان", menu_tel_k: "الهاتف", menu_social_k: "تابعونا",
+    hnav_apropos: "دارُنا", hnav_galerie: "المعرض", hnav_realisations: "قبل / بعد", hnav_marques: "علاماتنا", hnav_avis: "الآراء", hnav_contact: "اتصلوا بنا",
+    d3_title: "التصميم يتجسّد", d3_slogan: "تصاميم ثلاثية الأبعاد صارت واقعاً",
+    d3_desc: "من النمذجة الرقمية إلى الإتقان الحِرفي: دقّة تصاميمنا تصبح فضاء عيشكم.",
+    btn_discover: "اكتشفوا", btn_back: "رجوع",
+    ba_aria: "مقارنة قبل / بعد: استخدموا الأسهم لتحريك المؤشر",
+    ba_3d: "مخطط 3D",
+    ba_p: "مكانٌ واحد وحياتان. من الوضع القائم إلى التفصيل حسب الطلب، نحوّل كل فضاء إلى ركنٍ مضيء وعملي يدوم.",
+    hero_baseline: "مطابخ راقية مصممة حسب الطلب · الرباط وتمارة",
+    hero_hint: "مرّروا للاكتشاف",
+    about_eyebrow: "دارُ الحِرفة",
+    about_title: "فنّ المطابخ المصممة حسب الطلب",
+    about_p1: "وُلدت كوزين فاكتوري من قناعة راسخة: المطبخ الاستثنائي يُصمَّم حول من يعيشون فيه. في ورشتنا بتمارة، يُدرس كل مشروع ويُصنع ويُركَّب حسب الطلب، من أول خط بالقلم إلى آخر مقبض.",
+    about_p2: "بفضل أكثر من 20 سنة من الخبرة المكتسبة في سويسرا، ننقل إلى المغرب معايير سويسرية صارمة: دقة ميليمترية، تجهيزات ألمانية وخامات نبيلة. سيراميك وكوارتز وغرانيت، في قطع صُمِّمت لتدوم.",
+    about_p3: "نرافقكم في كامل المسار: تصميم ثلاثي الأبعاد واقعي لتصوّر مشروعكم، تصنيع داخل ورشاتنا، وتركيب متقن على يد فرقنا. أكثر من 500 إنجاز في المغرب خير شاهد على ذلك.",
+    about_badge: "إنجاز في المغرب",
+    about_more: "اعرفوا المزيد عنّا", sound_on: "تشغيل الصوت", sound_off: "كتم الصوت",
+    v_play: "تشغيل", v_pause: "إيقاف مؤقت", v_seek: "شريط تقدّم الفيديو",
+    pil1_t: "تصميم ثلاثي الأبعاد", pil1_d: "مطبخكم مجسَّد بأدق التفاصيل قبل التصنيع، لتقرّروا باطمئنان.",
+    pil2_t: "تصنيع حسب الطلب", pil2_d: "خامات نبيلة وتجهيزات أوروبية، تُجمَّع بدقة كبرى الورشات.",
+    pil3_t: "تركيب وتشطيبات", pil3_d: "فرق متخصصة، ورشٌ نظيف وتشطيبات تُراقَب بالمليمتر.",
+    cnt1: "سنة من الخبرة في سويسرا", cnt2: "مشروع منجز", cnt3: "حسب الطلب",
+    gal_title: "معرض إنجازاتنا",
+    gal_sub: "لمحة عن مطابخنا وواجهاتنا الراقية.",
+    gal_cat_cuisines: "مطابخ", gal_cat_vitrines: "واجهات وخزائن",
+    g1: "فيلا الهرهورة", g2: "بنتهاوس حي الرياض", g3: "دوبلكس السويسي", g4: "شقة أكدال",
+    g5: "فيلا تمارة", g6: "إقامة برستيجيا", g7: "فيلا عين عتيق", g8: "شقة المحيط",
+    ba_eyebrow: "قبل / بعد عندنا", ba_title: "قبل / بعد",
+    ba_sub: "اسحبوا المؤشر لاكتشاف التحوّل.",
+    ba_before: "قبل", ba_after: "بعد",
+    ba_c1: "تجديد شامل", ba_l1: "فيلا · الهرهورة",
+    ba_c2: "مطبخ مفتوح على الصالون", ba_l2: "شقة · حي الرياض",
+    ba_c3: "حمّام بالرخام", ba_l3: "فيلا · تمارة",
+    brands_title: "علامات كبرى تثق بنا",
+    brands_sub: "شركاؤنا من العلامات العالمية، اختيروا لتميّزهم.",
+    rev_title: "ماذا يقول عملاؤنا", rev_src: "تقييم Google",
+    r1: "بفضل خبرتهم في الخارج، يبتكرون فضاءات مطبخية استثنائية تجمع بين التصميم الأنيق والإتقان الحِرفي. تميّزٌ في كل تفصيل.",
+    r2: "شكرًا جزيلًا طارق على تصميم مطبخ أحلامي. أنيق وعملي في آن، تمامًا كما أردت. أنصح به مئة بالمئة!",
+    r3: "إلى جانب التصميم الرائع، مرافقة احترافية من البداية إلى النهاية. أنصح به كل من يريد الجودة دون عناء.",
+    r4: "راضية جدًا عن مطبخي الجديد! جودة المواد ممتازة والتشطيبات متقنة حقًا. فريق يُصغي ويهتم. أنصح به بشدة!",
+    r5: "استعنت بكوزين فاكتوري لمطبخي المفصّل على المقاس، وأنا مسرور بالنتيجة! مواد عالية الجودة، تشطيبات لا تشوبها شائبة، وتركيب في الوقت المحدد. أحسن طارق استغلال المساحة مع احترام ذوقي وميزانيتي.",
+    r6: "أشكر السيد طارق على احترافيته وجدّيته. أرشدني في اختيار المواد واحتُرم كرّاس الشروط بدقّة. أنصح به وأنا مغمض العينين.",
+    r7: "10/10. أحسنت سي طارق على تفانيه وإبداعه: أدار المشروع من الألف إلى الياء. كنا مستعجلين فرفع التحدّي، ودائم التواصل لتقديم النصيحة. ضيوفي يمدحونني في كل مناسبة.",
+    r8: "متجر ومطابخ بجودة عالية جدًا، استثنائي. يستحق الزيارة لمشاريع الديكور.",
+    r9: "أشكر طارق على احترافيته طوال المشروع: مُصغٍ، سريع الاستجابة وحسن المشورة. منتجات عالية الجودة، جميلة وعملية. أنصح به بشدة.",
+    ct_eyebrow: "مشروعكم يبدأ من هنا", ct_title: "احجزوا موعدكم",
+    ct_sub: "حدّثونا عن مشروعكم: نستقبلكم في الورشة أو ننتقل إليكم لأخذ القياسات.",
+    ct_wa: "الحجز عبر واتساب", ct_call: "الاتصال بالورشة",
+    ct_tel_k: "الهاتف", ct_addr_k: "العنوان", ct_hours_k: "أوقات العمل", ct_social_k: "مواقع التواصل",
+    ct_addr: "371 شارع أرفود، القطاع 3 رياض أولاد امطاع، تمارة 12000",
+    ct_hours1: "من الاثنين إلى السبت: من 9:00 إلى 19:00", ct_hours2: "الأحد: بموعد مسبق",
+    ft_baseline: "خامات نبيلة · حرفية عالية · طابع خالد",
+    aria_menu: "فتح القائمة", aria_prev: "الصورة السابقة", aria_next: "الصورة التالية",
+    aria_close: "إغلاق", aria_wa: "راسلونا عبر واتساب",
+    wa_msg: "السلام عليكم كوزين فاكتوري، أودّ حجز موعد لمشروع مطبخ مصمم حسب الطلب."
+  },
+  en: {
+    meta_title: "Cuisines Factory · High-end custom kitchens in Temara & Rabat",
+    meta_desc: "Cuisines Factory designs, builds and installs high-end custom kitchens in Rabat and Temara. Over 20 years of experience in Switzerland, 3D design, noble materials.",
+    nav_apropos: "About us", nav_galerie: "Gallery", nav_realisations: "Before / After",
+    nav_marques: "Our brands", nav_avis: "Client reviews", nav_contact: "Book a visit",
+    menu_addr_k: "Address", menu_tel_k: "Phone", menu_social_k: "Follow us",
+    hnav_apropos: "Our house", hnav_galerie: "Gallery", hnav_realisations: "Before / After", hnav_marques: "Our brands", hnav_avis: "Reviews", hnav_contact: "Contact",
+    d3_title: "Design Made Real", d3_slogan: "3D concepts brought to life",
+    d3_desc: "From digital modeling to artisanal mastery: the precision of our renders becomes your living space.",
+    btn_discover: "Discover", btn_back: "Back",
+    ba_aria: "Before / after comparison: use the arrow keys to move the handle",
+    ba_3d: "3D Plan",
+    ba_p: "One space, two lives. From what exists to fully custom work, we turn every room into a bright, functional and lasting place.",
+    hero_baseline: "High-end custom kitchens · Rabat & Temara",
+    hero_hint: "Scroll to discover",
+    about_eyebrow: "Our house",
+    about_title: "The art of the custom kitchen",
+    about_p1: "Cuisines Factory was born from one conviction: an exceptional kitchen is designed around the people who live in it. In our Temara workshop, every project is designed, built and installed to measure, from the first pencil stroke to the last handle.",
+    about_p2: "With more than 20 years of experience gained in Switzerland, we bring Swiss standards back to Morocco: millimetre precision, German hardware, noble materials. Ceramic, quartz and granite come together in pieces built to last.",
+    about_p3: "We stay at your side throughout: realistic 3D design to visualise your project, manufacturing in our workshops, careful installation by our own teams. More than 500 projects completed in Morocco speak for it.",
+    about_badge: "Projects in Morocco",
+    about_more: "Learn more about us", sound_on: "Enable sound", sound_off: "Mute",
+    v_play: "Play", v_pause: "Pause", v_seek: "Video progress",
+    pil1_t: "3D design", pil1_d: "Your kitchen visualised down to the smallest detail before production, so you can decide with confidence.",
+    pil2_t: "Custom manufacturing", pil2_d: "Noble materials and European hardware, assembled with workshop precision.",
+    pil3_t: "Installation & finishes", pil3_d: "Dedicated teams, a clean site and finishes checked to the millimetre.",
+    cnt1: "Years of experience in Switzerland", cnt2: "Completed projects", cnt3: "Made to measure",
+    gal_title: "Project gallery",
+    gal_sub: "A glimpse of our high-end kitchens and display cabinets.",
+    gal_cat_cuisines: "Kitchens", gal_cat_vitrines: "Cabinets & Dressings",
+    g1: "Harhoura Villa", g2: "Hay Riad Penthouse", g3: "Souissi Duplex", g4: "Agdal Apartment",
+    g5: "Temara Villa", g6: "Prestigia Residence", g7: "Ain Attig Villa", g8: "Ocean View Apartment",
+    ba_eyebrow: "Our before & after", ba_title: "Before / After",
+    ba_sub: "Drag the handle to reveal the transformation.",
+    ba_before: "Before", ba_after: "After",
+    ba_c1: "Full renovation", ba_l1: "Villa · Harhoura",
+    ba_c2: "Open-plan kitchen", ba_l2: "Apartment · Hay Riad",
+    ba_c3: "Marble bathroom", ba_l3: "Villa · Temara",
+    brands_title: "Brands that trust us",
+    brands_sub: "Our partner brands, selected for their excellence.",
+    rev_title: "What our clients say", rev_src: "Google rating",
+    r1: "Drawing on their experience abroad, they create exceptional culinary spaces that combine elegant design with artisanal craftsmanship. Excellence in every detail.",
+    r2: "A big thank you to Tarik for designing the kitchen of my dreams. Elegant and functional, exactly what I wanted. I recommend them 100%!",
+    r3: "Beyond the magnificent design, professional support from start to finish. I recommend them to anyone who wants quality without the hassle.",
+    r4: "Very happy with my new kitchen! The materials are excellent and the finishes truly refined. An attentive team that really listens. Highly recommended!",
+    r5: "I called on Cuisines Factory for my bespoke kitchen and I'm delighted with the result! High-quality materials, impeccable finishes, installation on time. Tarek made the most of the space while respecting my taste and budget.",
+    r6: "I thank Mr Tarik for his professionalism and dedication. He guided me in choosing the materials and the brief was scrupulously respected. I recommend them with my eyes closed.",
+    r7: "10/10. Well done to Si Tarik for his dedication and creativity: he ran the project from A to Z. We were in a hurry, and he rose to the challenge, always reachable for advice. My guests compliment me at every gathering.",
+    r8: "Shop and kitchens of very high quality, exceptional. Well worth a visit for your design projects.",
+    r9: "I thank Tarik for his professionalism throughout the project: attentive, responsive and full of good advice. Products of great quality, both beautiful and functional. Highly recommended.",
+    ct_eyebrow: "Your project starts here", ct_title: "Book an appointment",
+    ct_sub: "Tell us about your project: we welcome you at the workshop, or we come to you to take measurements.",
+    ct_wa: "Book on WhatsApp", ct_call: "Call the workshop",
+    ct_tel_k: "Phone", ct_addr_k: "Address", ct_hours_k: "Opening hours", ct_social_k: "Social media",
+    ct_addr: "371 Erfoud Street, sector 3 Ryad Oulad Mtaa, Temara 12000",
+    ct_hours1: "Monday to Saturday: 9:00 am to 7:00 pm", ct_hours2: "Sunday: by appointment",
+    ft_baseline: "Noble materials · Craftsmanship · Timeless",
+    aria_menu: "Open menu", aria_prev: "Previous image", aria_next: "Next image",
+    aria_close: "Close", aria_wa: "Message us on WhatsApp",
+    wa_msg: "Hello Cuisines Factory, I would like to book an appointment for a custom kitchen project."
+  }
+};
+
+let currentLang = "fr"; /* mémorisé en variable JS simple, pas de localStorage */
+const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = function(s){ return document.querySelector(s); };
+const $$ = function(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); };
+
+/* ===== Logo officiel embarque : s'affiche partout, sans dependre du cache ni du chemin ===== */
+const LOGO_DATA = "data:image/jpeg;base64,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";
+(function(){
+  document.querySelectorAll("#loader .loader-logo, .brandmark img, .foot-logo img").forEach(function(i){ i.onerror = null; i.src = LOGO_DATA; });
+  document.querySelectorAll(".brandmark, .foot-logo, #loader").forEach(function(e){ e.classList.remove("noimg"); });
+  var favIcon = document.querySelector('link[rel="icon"]');
+  if (favIcon) favIcon.href = LOGO_DATA;
+})();
+
+
+
+/* ================= Données réelles (défauts ; surchargées par content/*.json via le CMS) ================= */
+let design3dPairs = [
+  { avant: "images/design-3d/avant-1.jpg",  apres: "images/design-3d/apres-1.jpg",  w: 1280, h: 850 },
+  { avant: "images/design-3d/avant-2.jpg",  apres: "images/design-3d/apres-2.jpg",  w: 1280, h: 656 },
+  { avant: "images/design-3d/avant-3.jpg",  apres: "images/design-3d/apres-3.jpg",  w: 1024, h: 1280 },
+  { avant: "images/design-3d/avant-4.jpg",  apres: "images/design-3d/apres-4.jpg",  w: 1280, h: 723 },
+  { avant: "images/design-3d/avant-5.jpg",  apres: "images/design-3d/apres-5.jpg",  w: 1280, h: 960 },
+  { avant: "images/design-3d/avant-6.jpg",  apres: "images/design-3d/apres-6.jpg",  w: 1280, h: 960 },
+  { avant: "images/design-3d/avant-7.jpg",  apres: "images/design-3d/apres-7.jpg",  w: 1280, h: 720 },
+  { avant: "images/design-3d/avant-8.jpg",  apres: "images/design-3d/apres-8.jpg",  w: 1280, h: 720 },
+  { avant: "images/design-3d/avant-9.jpg",  apres: "images/design-3d/apres-9.jpg",  w: 1280, h: 720 },
+  { avant: "images/design-3d/avant-10.jpg", apres: "images/design-3d/apres-10.jpg", w: 1280, h: 720 },
+  { avant: "images/design-3d/avant-11.jpg", apres: "images/design-3d/apres-11.jpg", w: 1280, h: 640 },
+  { avant: "images/design-3d/avant-12.jpg", apres: "images/design-3d/apres-12.jpg", w: 1280, h: 805 },
+  { avant: "images/design-3d/avant-13.jpg", apres: "images/design-3d/apres-13.jpg", w: 1280, h: 853 },
+  { avant: "images/design-3d/avant-14.jpg", apres: "images/design-3d/apres-14.jpg", w: 1280, h: 863 }
+];
+let baPairs = [
+  { avant: "images/avant-apres/avant-1.jpg", apres: "images/avant-apres/apres-1.jpg", w: 1024, h: 1280 },
+  { avant: "images/avant-apres/avant-2.jpg", apres: "images/avant-apres/apres-2.jpg", w: 1280, h: 960 },
+  { avant: "images/avant-apres/avant-3.jpg", apres: "images/avant-apres/apres-3.jpg", w: 1280, h: 960 },
+  { avant: "images/avant-apres/avant-4.jpg", apres: "images/avant-apres/apres-4.jpg", w: 1280, h: 720 },
+  { avant: "images/avant-apres/avant-5.jpg", apres: "images/avant-apres/apres-5.jpg", w: 1280, h: 853 }
+];
+/* Galerie · catégorie CUISINES : photos existantes + nouvelles Cuisine_4K */
+let galCuisines = [
+  { src: "images/cuisines-4k/01.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/02.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/03.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/04.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/05.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/06.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/07.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/08.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/09.jpg", w: 1600, h: 2000 },
+  { src: "images/cuisines-4k/10.jpg", w: 1600, h: 2000 },
+  { src: "images/galerie-realisation/1.jpg",  w: 1024, h: 1280 },
+  { src: "images/galerie-realisation/2.jpg",  w: 1280, h: 1119 },
+  { src: "images/galerie-realisation/3.jpg",  w: 960,  h: 1280 },
+  { src: "images/galerie-realisation/4.jpg",  w: 1280, h: 1124 },
+  { src: "images/galerie-realisation/5.jpg",  w: 1280, h: 960 },
+  { src: "images/galerie-realisation/6.jpg",  w: 1280, h: 960 },
+  { src: "images/galerie-realisation/7.jpg",  w: 1280, h: 960 },
+  { src: "images/galerie-realisation/8.jpg",  w: 1280, h: 960 },
+  { src: "images/galerie-realisation/9.jpg",  w: 720,  h: 1280 },
+  { src: "images/galerie-realisation/10.jpg", w: 711,  h: 1280 },
+  { src: "images/galerie-realisation/11.jpg", w: 720,  h: 1280 },
+  { src: "images/galerie-realisation/12.jpg", w: 720,  h: 1280 },
+  { src: "images/galerie-realisation/13.jpg", w: 960,  h: 1280 },
+  { src: "images/galerie-realisation/14.jpg", w: 717,  h: 1280 },
+  { src: "images/galerie-realisation/15.jpg", w: 720,  h: 1280 },
+  { src: "images/galerie-realisation/16.jpg", w: 1280, h: 960 },
+  { src: "images/galerie-realisation/17.jpg", w: 1280, h: 960 },
+  { src: "images/galerie-realisation/18.jpg", w: 1280, h: 960 },
+  { src: "images/galerie-realisation/19.jpg", w: 1280, h: 960 },
+  { src: "images/galerie-realisation/20.jpg", w: 1254, h: 1254 },
+  { src: "images/galerie-realisation/21.jpg", w: 768,  h: 1280 },
+  { src: "images/galerie-realisation/22.jpg", w: 960,  h: 1280 },
+  { src: "images/galerie-realisation/23.jpg", w: 960,  h: 1280 },
+  { src: "images/galerie-realisation/24.jpg", w: 960,  h: 1280 },
+  { src: "images/galerie-realisation/25.jpg", w: 720,  h: 1280 },
+  { src: "images/galerie-realisation/26.jpg", w: 1280, h: 960 },
+  { src: "images/galerie-realisation/27.jpg", w: 1280, h: 960 },
+  { src: "images/avant-apres/apres-1.jpg",   w: 1024, h: 1280 },
+  { src: "images/avant-apres/apres-2.jpg",   w: 1280, h: 960 },
+  { src: "images/avant-apres/apres-3.jpg",   w: 1280, h: 960 },
+  { src: "images/avant-apres/apres-4.jpg",   w: 1280, h: 720 },
+  { src: "images/design-3d/apres-1.jpg",     w: 1280, h: 850 },
+  { src: "images/design-3d/apres-2.jpg",     w: 1280, h: 656 },
+  { src: "images/design-3d/apres-3.jpg",     w: 1024, h: 1280 },
+  { src: "images/design-3d/apres-4.jpg",     w: 1280, h: 723 },
+  { src: "images/design-3d/apres-5.jpg",     w: 1280, h: 960 },
+  { src: "images/design-3d/apres-6.jpg",     w: 1280, h: 960 },
+  { src: "images/design-3d/apres-7.jpg",     w: 1280, h: 720 },
+  { src: "images/design-3d/apres-8.jpg",     w: 1280, h: 720 },
+  { src: "images/design-3d/apres-9.jpg",     w: 1280, h: 720 },
+  { src: "images/design-3d/apres-10.jpg",    w: 1280, h: 720 },
+  { src: "images/design-3d/apres-11.jpg",    w: 1280, h: 640 },
+  { src: "images/design-3d/apres-12.jpg",    w: 1280, h: 805 }
+];
+/* Galerie · catégorie VITRINES : dossier Vitrines */
+let galVitrines = [
+  { src: "images/vitrines/01.jpg", w: 1600, h: 1600 },
+  { src: "images/vitrines/02.jpg", w: 1600, h: 1999 },
+  { src: "images/vitrines/03.jpg", w: 1600, h: 1999 },
+  { src: "images/vitrines/04.jpg", w: 1600, h: 1600 },
+  { src: "images/vitrines/05.jpg", w: 1600, h: 1600 },
+  { src: "images/vitrines/06.jpg", w: 1600, h: 1999 },
+  { src: "images/vitrines/07.jpg", w: 1600, h: 1600 },
+  { src: "images/vitrines/08.jpg", w: 1600, h: 1600 },
+  { src: "images/vitrines/09.jpg", w: 1600, h: 1200 }
+];
+
+/* ================= Construction cartes & vues (composant slider unique) ================= */
+/* ratio : ratio d'affichage imposé (recadrage centré, ex. "16 / 9") sinon ratio natif de l'image après.
+   labelKey : clé i18n de l'étiquette gauche (ba_3d pour les sliders 3D, ba_before par défaut). */
+function buildSlider(pair, defer, ratio, labelKey){
+  const el = document.createElement("div");
+  el.className = "ba-wrap" + (!ratio && pair.w / pair.h < 1 ? " portrait" : "");
+  el.setAttribute("data-ba", "");
+  el.setAttribute("role", "slider");
+  el.setAttribute("tabindex", "0");
+  el.setAttribute("aria-valuemin", "0");
+  el.setAttribute("aria-valuemax", "100");
+  el.setAttribute("aria-valuenow", "50");
+  el.setAttribute("data-i18n-aria", "ba_aria");
+  el.setAttribute("aria-label", "Comparateur avant / après : utilisez les flèches pour déplacer le curseur");
+  el.style.aspectRatio = ratio || ((pair.w && pair.h) ? (pair.w + " / " + pair.h) : "4 / 3");
+  const srcAttr = defer ? "data-src" : "src";
+  const dimA = (pair.w && pair.h) ? (' width="' + pair.w + '" height="' + pair.h + '"') : "";
+  el.innerHTML =
+    '<img class="ba-after" ' + srcAttr + '="' + pair.apres + '" alt="Réalisation Cuisines Factory"' + dimA + ' loading="lazy">' +
+    '<img class="ba-before" ' + srcAttr + '="' + pair.avant + '" alt="Avant travaux" loading="lazy">' +
+    '<div class="ba-line"></div>' +
+    '<div class="ba-knob" aria-hidden="true">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>' +
+    '</div>' +
+    '<span class="ba-label lab-before" data-i18n="' + (labelKey || "ba_before") + '">' + (labelKey === "ba_3d" ? "Plan 3D" : "Avant") + '</span>' +
+    '<span class="ba-label lab-after" data-i18n="ba_after">Après</span>';
+  return el;
+}
+function galButton(im, list, idx){
+  const b = document.createElement("button");
+  b.className = "gal-item";
+  b.type = "button";
+  const dim = (im.w && im.h) ? (' width="' + im.w + '" height="' + im.h + '"') : "";
+  b.innerHTML = '<img src="' + im.src + '" alt="Réalisation Cuisines Factory"' + dim + ' loading="lazy"><span class="voile" aria-hidden="true"></span>';
+  b.addEventListener("click", function(){ openLightbox(list, idx); });
+  return b;
+}
+function fill(sel, nodes){ const c = $(sel); if (c){ c.innerHTML = ""; nodes.forEach(function(n){ c.appendChild(n); }); } }
+
+/* Construit cartes + vues à partir des données courantes (défauts OU content/*.json) */
+function buildAll(){
+  const feat3d = design3dPairs[0];
+  if (feat3d) fill("#d3-card", [ buildSlider(feat3d, false, "3 / 2", "ba_3d") ]);
+  fill("#d3-view", design3dPairs.map(function(p){ return buildSlider(p, true, "4 / 3", "ba_3d"); }));
+
+  const featBa = baPairs[2] || baPairs[0];
+  if (featBa) fill("#ba-card", [ buildSlider(featBa, false, "4 / 3") ]);
+  fill("#ba-view", baPairs.map(function(p){ return buildSlider(p, true, "4 / 3"); }));
+
+  /* Carte teaser galerie : 2 cuisines + 2 vitrines en alternance (uniquement si l'image existe) */
+  const galTeaser = [
+    { list: galCuisines, idx: 0 },
+    { list: galVitrines, idx: 0 },
+    { list: galCuisines, idx: 1 },
+    { list: galVitrines, idx: 1 }
+  ].filter(function(t){ return t.list[t.idx]; });
+  fill("#gal-card", galTeaser.map(function(t){ return galButton(t.list[t.idx], t.list, t.idx); }));
+
+  /* Les vues galerie se rendent à la demande : on réinitialise le cache si déjà rendues */
+  galRendered.cuisines = false; galRendered.vitrines = false;
+  const gc = $("#gal-view-cuisines"), gv = $("#gal-view-vitrines");
+  if (gc && gc.childElementCount) gc.innerHTML = "";
+  if (gv && gv.childElementCount) gv.innerHTML = "";
+  if (currentView === "galerie-complete") renderGalCategory(galActiveCat);
+
+  /* Traduit les libellés fraîchement injectés (Avant / Après / Plan 3D) selon la langue active */
+  if (typeof setLang === "function" && typeof currentLang !== "undefined") setLang(currentLang);
+}
+
+/* Charge le contenu éditable (CMS). En cas d'échec, on garde les défauts ci-dessus. */
+function loadContent(){
+  const toImgs = function(d){ return (d && Array.isArray(d.images)) ? d.images.map(function(o){ return { src: o.image }; }).filter(function(o){ return o.src; }) : null; };
+  const toPairs = function(d){ return (d && Array.isArray(d.pairs)) ? d.pairs.map(function(o){ return { avant: o.avant, apres: o.apres }; }).filter(function(o){ return o.avant && o.apres; }) : null; };
+  const jobs = [
+    ["content/galerie-cuisines.json",     function(d){ const v = toImgs(d);  if (v && v.length) galCuisines = v; }],
+    ["content/galerie-vitrines.json",     function(d){ const v = toImgs(d);  if (v && v.length) galVitrines = v; }],
+    ["content/sliders-3d.json",           function(d){ const v = toPairs(d); if (v && v.length) design3dPairs = v; }],
+    ["content/sliders-avant-apres.json",  function(d){ const v = toPairs(d); if (v && v.length) baPairs = v; }]
+  ];
+  return Promise.all(jobs.map(function(j){
+    return fetch(j[0], { cache: "no-cache" })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(j[1])
+      .catch(function(){});
+  }));
+}
+const galRendered = { cuisines: false, vitrines: false };
+let galActiveCat = "cuisines";
+function renderGalCategory(cat){
+  const list = cat === "vitrines" ? galVitrines : galCuisines;
+  const grid = $("#gal-view-" + cat);
+  if (grid && !galRendered[cat]){
+    list.forEach(function(im, i){ grid.appendChild(galButton(im, list, i)); });
+    galRendered[cat] = true;
+  }
+}
+$$(".gal-tab").forEach(function(tab){
+  tab.addEventListener("click", function(){
+    const cat = tab.getAttribute("data-cat");
+    galActiveCat = cat;
+    $$(".gal-tab").forEach(function(t){ const on = t === tab; t.classList.toggle("is-active", on); t.setAttribute("aria-selected", String(on)); });
+    ["cuisines", "vitrines"].forEach(function(c){ const g = $("#gal-view-" + c); if (g) g.hidden = (c !== cat); });
+    renderGalCategory(cat);
+  });
+});
+
+/* Chargement du contenu éditable puis construction (défauts si les JSON sont absents) */
+loadContent().then(buildAll);
+
+/* ================= Vues plein écran internes (Découvrir) ================= */
+const VIEW_IDS = ["design-3d", "galerie-complete", "avant-apres"];
+let currentView = null, viewTrigger = null;
+
+function openView(id){
+  const v = document.getElementById(id);
+  if (!v || currentView === id) return;
+  if (currentView){ document.getElementById(currentView).classList.remove("open"); }
+  else {
+    document.documentElement.style.setProperty("--sbw", (window.innerWidth - document.documentElement.clientWidth) + "px");
+    document.body.classList.add("view-open");
+  }
+  currentView = id;
+  /* chargement différé : les vraies sources sont branchées à la première ouverture */
+  v.querySelectorAll("img[data-src]").forEach(function(img){
+    img.src = img.getAttribute("data-src");
+    img.removeAttribute("data-src");
+  });
+  if (id === "galerie-complete") renderGalCategory(galActiveCat); /* rend la catégorie active à la demande */
+  v.classList.add("open");
+  v.scrollTop = 0;
+  const back = v.querySelector(".view-back");
+  if (back) requestAnimationFrame(function(){ requestAnimationFrame(function(){ back.focus({ preventScroll: true }); }); });
+}
+function closeView(){
+  if (!currentView) return;
+  document.getElementById(currentView).classList.remove("open");
+  currentView = null;
+  document.body.classList.remove("view-open");
+  document.documentElement.style.setProperty("--sbw", "0px");
+  if (viewTrigger){ viewTrigger.focus({ preventScroll: true }); viewTrigger = null; }
+}
+function closeViewUI(){
+  /* fermeture via bouton retour ou Échap : on repasse par l'historique si on y est entré par clic */
+  if (viewTrigger){ history.back(); }
+  else { history.replaceState(null, "", window.location.pathname + window.location.search); closeView(); }
+}
+function syncViewWithHash(){
+  const id = window.location.hash.replace("#", "");
+  if (VIEW_IDS.indexOf(id) !== -1) openView(id); else closeView();
+}
+$$("[data-view]").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    viewTrigger = btn;
+    /* pushState : pas de navigation de fragment, donc pas de vol de focus ni de scroll */
+    history.pushState(null, "", "#" + btn.getAttribute("data-view"));
+    openView(btn.getAttribute("data-view"));
+  });
+});
+$$(".view .view-back").forEach(function(b){
+  b.addEventListener("click", closeViewUI);
+});
+window.addEventListener("hashchange", syncViewWithHash);
+
+function updateWhatsApp(){
+  const msg = encodeURIComponent(translations[currentLang].wa_msg);
+  $$("a[data-wa]").forEach(function(a){ a.href = "https://wa.me/212623230649?text=" + msg; });
+}
+
+function setLang(lang){
+  currentLang = lang;
+  const t = translations[lang];
+  document.documentElement.setAttribute("lang", lang);
+  document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+  $$("[data-i18n]").forEach(function(el){
+    const v = t[el.getAttribute("data-i18n")];
+    if (v !== undefined) el.textContent = v;
+  });
+  $$("[data-i18n-aria]").forEach(function(el){
+    const v = t[el.getAttribute("data-i18n-aria")];
+    if (v !== undefined) el.setAttribute("aria-label", v);
+  });
+  $$(".lang-btn").forEach(function(b){
+    b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+  });
+  document.title = t.meta_title;
+  const md = document.querySelector('meta[name="description"]');
+  if (md) md.setAttribute("content", t.meta_desc);
+  updateWhatsApp();
+}
+
+$$(".lang-btn").forEach(function(b){
+  b.addEventListener("click", function(){ setLang(b.getAttribute("data-lang")); });
+});
+
+/* ================= Menu plein écran ================= */
+const menu = $("#menu"), burger = $("#burger");
+function toggleMenu(force){
+  const open = (force !== undefined) ? force : !menu.classList.contains("open");
+  menu.classList.toggle("open", open);
+  document.body.classList.toggle("menu-open", open);
+  burger.setAttribute("aria-expanded", String(open));
+}
+burger.addEventListener("click", function(){ toggleMenu(); });
+$$("#menu .menu-nav a").forEach(function(a){
+  a.addEventListener("click", function(){ toggleMenu(false); finishHero(); });
+});
+$("#brandmark").addEventListener("click", function(){ toggleMenu(false); });
+
+/* Nav desktop : libère le hero si encore verrouillé, puis scroll fluide vers l'ancre */
+$$(".desktop-nav a").forEach(function(a){
+  a.addEventListener("click", function(e){
+    var target = document.querySelector(a.getAttribute("href"));
+    if (!target) return;
+    if (!released && !reduced){
+      e.preventDefault();
+      setProgress(1);
+      requestAnimationFrame(function(){ target.scrollIntoView({ behavior: reduced ? "auto" : "smooth" }); });
+    }
+  });
+});
+
+/* ================= Header au scroll ================= */
+const header = $("#header");
+const sentinel = document.createElement("div");
+sentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:90px;pointer-events:none;";
+document.body.prepend(sentinel);
+new IntersectionObserver(function(en){
+  header.classList.toggle("scrolled", !en[0].isIntersecting);
+}).observe(sentinel);
+
+/* ================= Révélation au scroll ================= */
+const revealIO = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if (en.isIntersecting){ en.target.classList.add("in"); revealIO.unobserve(en.target); }
+  });
+}, { threshold: 0, rootMargin: "0px 0px 20% 0px" });
+$$(".reveal").forEach(function(el){ revealIO.observe(el); });
+/* Filet de sécurité : si l'observer ne se déclenche pas (navigateur/rendu capricieux),
+   rien ne doit rester invisible — on révèle tout au bout de 3 s. */
+setTimeout(function(){ $$(".reveal:not(.in)").forEach(function(el){ el.classList.add("in"); }); }, 3000);
+
+/* ================= Compteurs ================= */
+function animateCounters(){
+  $$("[data-count]").forEach(function(el){
+    const target = parseInt(el.getAttribute("data-count"), 10);
+    if (reduced){ el.textContent = target >= 1000 ? target.toLocaleString("fr-FR") : String(target); return; }
+    const t0 = performance.now(), dur = 1800;
+    function tick(t){
+      const k = Math.min(1, (t - t0) / dur);
+      const e = 1 - Math.pow(1 - k, 3);
+      const val = Math.round(target * e);
+      el.textContent = val >= 1000 ? val.toLocaleString("fr-FR") : String(val);
+      if (k < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+const countersEl = $(".counters");
+if (countersEl){
+  const cio = new IntersectionObserver(function(en){
+    if (en[0].isIntersecting){ animateCounters(); cio.disconnect(); }
+  }, { threshold: 0.3 });
+  cio.observe(countersEl);
+}
+
+/* ================= Vidéo « Notre maison » : autoplay muet + contrôles (lecture, progression, son) ================= */
+const aboutVideo = $("#about-video");
+if (aboutVideo){
+  const aPlay = $("#about-play"), aSeek = $("#about-seek"), aFill = $("#about-seek-fill"),
+        aTime = $("#about-time"), aSound = $("#about-sound");
+  let srcLoaded = false, userPaused = false, seeking = false;
+
+  function loadSrc(){
+    if (srcLoaded) return;
+    const s = document.createElement("source");
+    s.src = "assets/notre-maison-web.mp4?v=3"; s.type = "video/mp4";
+    aboutVideo.appendChild(s); aboutVideo.load(); srcLoaded = true;
+  }
+  function fmt(t){ t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); }
+  function syncPlay(){
+    const playing = !aboutVideo.paused && !aboutVideo.ended;
+    if (aPlay){
+      aPlay.classList.toggle("is-playing", playing);
+      aPlay.setAttribute("data-i18n-aria", playing ? "v_pause" : "v_play");
+      aPlay.setAttribute("aria-label", translations[currentLang][playing ? "v_pause" : "v_play"]);
+    }
+  }
+  function play(){ userPaused = false; loadSrc(); const p = aboutVideo.play(); if (p && p.catch) p.catch(function(){}); }
+
+  if (aPlay) aPlay.addEventListener("click", function(){ if (aboutVideo.paused){ play(); } else { userPaused = true; aboutVideo.pause(); } });
+  aboutVideo.addEventListener("play", syncPlay);
+  aboutVideo.addEventListener("pause", syncPlay);
+  aboutVideo.addEventListener("timeupdate", function(){
+    if (seeking || !aboutVideo.duration) return;
+    const pct = aboutVideo.currentTime / aboutVideo.duration * 100;
+    if (aFill) aFill.style.width = pct + "%";
+    if (aSeek) aSeek.setAttribute("aria-valuenow", Math.round(pct));
+    if (aTime) aTime.textContent = fmt(aboutVideo.currentTime);
+  });
+
+  if (aSound) aSound.addEventListener("click", function(){
+    loadSrc();
+    aboutVideo.muted = !aboutVideo.muted;
+    const on = !aboutVideo.muted;
+    aSound.classList.toggle("is-on", on);
+    aSound.setAttribute("aria-pressed", String(on));
+    aSound.setAttribute("data-i18n-aria", on ? "sound_off" : "sound_on");
+    aSound.setAttribute("aria-label", translations[currentLang][on ? "sound_off" : "sound_on"]);
+    if (on && aboutVideo.paused && !userPaused) play();
+  });
+
+  /* Seek : souris + tactile (pointer), + clavier flèches */
+  function seekTo(clientX){
+    if (!aSeek) return;
+    const r = aSeek.getBoundingClientRect();
+    let ratio = (clientX - r.left) / r.width;
+    if (document.documentElement.dir === "rtl") ratio = 1 - ratio;
+    ratio = Math.min(1, Math.max(0, ratio));
+    loadSrc();
+    if (aboutVideo.duration){
+      aboutVideo.currentTime = ratio * aboutVideo.duration;
+      if (aFill) aFill.style.width = (ratio * 100) + "%";
+      if (aSeek) aSeek.setAttribute("aria-valuenow", Math.round(ratio * 100));
+      if (aTime) aTime.textContent = fmt(aboutVideo.currentTime);
+    }
+  }
+  if (aSeek){
+    aSeek.addEventListener("pointerdown", function(e){ seeking = true; try { aSeek.setPointerCapture(e.pointerId); } catch(_){} seekTo(e.clientX); });
+    aSeek.addEventListener("pointermove", function(e){ if (seeking) seekTo(e.clientX); });
+    ["pointerup", "pointercancel", "pointerleave"].forEach(function(ev){ aSeek.addEventListener(ev, function(){ seeking = false; }); });
+    aSeek.addEventListener("keydown", function(e){
+      if (!aboutVideo.duration) return;
+      if (e.key === "ArrowLeft"){ e.preventDefault(); aboutVideo.currentTime = Math.max(0, aboutVideo.currentTime - 5); }
+      else if (e.key === "ArrowRight"){ e.preventDefault(); aboutVideo.currentTime = Math.min(aboutVideo.duration, aboutVideo.currentTime + 5); }
+      else if (e.key === " " || e.key === "Enter"){ e.preventDefault(); if (aPlay) aPlay.click(); }
+    });
+  }
+
+  /* Autoplay muet à l'entrée dans le viewport (sauf mouvement réduit ou pause manuelle) */
+  const vio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ loadSrc(); if (!reduced && !userPaused){ const p = aboutVideo.play(); if (p && p.catch) p.catch(function(){}); } }
+      else if (!aboutVideo.paused){ aboutVideo.pause(); }
+    });
+  }, { threshold: 0.25 });
+  vio.observe(aboutVideo);
+
+  syncPlay();
+}
+
+/* ================= Lightbox galerie (liste + index dynamiques) ================= */
+const lightbox = $("#lightbox"), lbImg = $("#lb-img"), lbCap = $("#lb-cap");
+let lbList = [], lbIndex = 0;
+function lbShow(i){
+  if (!lbList.length) return;
+  lbIndex = (i + lbList.length) % lbList.length;
+  lbImg.src = lbList[lbIndex].src;
+  lbImg.alt = "Réalisation Cuisines Factory";
+  lbCap.textContent = "";
+}
+function openLightbox(list, i){
+  lbList = list; lbShow(i);
+  lightbox.classList.add("open");
+  document.body.classList.add("lb-open");
+}
+function lbClose(){
+  lightbox.classList.remove("open");
+  document.body.classList.remove("lb-open");
+}
+$(".lb-prev").addEventListener("click", function(e){ e.stopPropagation(); lbShow(lbIndex - 1); });
+$(".lb-next").addEventListener("click", function(e){ e.stopPropagation(); lbShow(lbIndex + 1); });
+$(".lb-close").addEventListener("click", lbClose);
+lightbox.addEventListener("click", function(e){ if (e.target === lightbox) lbClose(); });
+
+document.addEventListener("keydown", function(e){
+  if (lightbox.classList.contains("open")){
+    if (e.key === "Escape") lbClose();
+    else if (e.key === "ArrowLeft") lbShow(lbIndex - 1);
+    else if (e.key === "ArrowRight") lbShow(lbIndex + 1);
+  } else if (currentView && e.key === "Escape"){
+    closeViewUI();
+  } else if (menu.classList.contains("open") && e.key === "Escape"){
+    toggleMenu(false);
+  }
+});
+
+/* ================= Comparateurs avant / après (souris, tactile, clavier) ================= */
+$$("[data-ba]").forEach(function(w){
+  let drag = false;
+  function apply(pct){
+    pct = Math.max(6, Math.min(94, pct));
+    w.style.setProperty("--pos", pct + "%");
+    w.setAttribute("aria-valuenow", String(Math.round(pct)));
+  }
+  function setPos(clientX){
+    const r = w.getBoundingClientRect();
+    apply((clientX - r.left) / r.width * 100);
+  }
+  w.addEventListener("pointerdown", function(e){
+    drag = true;
+    if (w.setPointerCapture && e.pointerId !== undefined){ try { w.setPointerCapture(e.pointerId); } catch(_){} }
+    setPos(e.clientX);
+  });
+  w.addEventListener("pointermove", function(e){ if (drag) setPos(e.clientX); });
+  ["pointerup", "pointercancel", "pointerleave"].forEach(function(ev){
+    w.addEventListener(ev, function(){ drag = false; });
+  });
+  w.addEventListener("keydown", function(e){
+    const cur = parseFloat(w.style.getPropertyValue("--pos")) || 50;
+    if (e.key === "ArrowLeft"){ e.preventDefault(); apply(cur - 4); }
+    else if (e.key === "ArrowRight"){ e.preventDefault(); apply(cur + 4); }
+    else if (e.key === "Home"){ e.preventDefault(); apply(6); }
+    else if (e.key === "End"){ e.preventDefault(); apply(94); }
+  });
+});
+
+/* ================= Colonnes d'avis (boucle infinie) ================= */
+if (!reduced){
+  $$(".t-col").forEach(function(col){
+    const stack = col.querySelector(".t-stack");
+    const clone = stack.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    col.appendChild(clone);
+  });
+}
+
+/* ================= Hero · effet scroll-expansion (vidéo en boucle qui grandit) ================= */
+const heroEl = $("#hero"), mediaEl = $("#hero-media"), hintEl = $("#hero-hint"), bgEl = $("#hero-bg");
+const heroVideo = $("#hero-video");
+const loaderEl = $("#loader");
+function hideLoader(){ if (loaderEl) loaderEl.classList.add("hidden"); }
+const WHEEL_F = 0.0009, TOUCH_F = 0.006;
+let progress = 0, released = false, ready = true;
+
+function heroSizes(){
+  const vw = window.innerWidth, vh = window.innerHeight;
+  return { w0: Math.min(300, vw * 0.8), h0: Math.min(400, vh * 0.56), w1: vw * 0.95, h1: vh * 0.85 };
+}
+function applyHero(){
+  const s = heroSizes(), p = progress;
+  mediaEl.style.width = (s.w0 + (s.w1 - s.w0) * p) + "px";
+  mediaEl.style.height = (s.h0 + (s.h1 - s.h0) * p) + "px";
+  heroEl.style.setProperty("--p", p.toFixed(4));
+  bgEl.style.opacity = String(1 - p * 0.5);
+  if (hintEl) hintEl.style.opacity = String(Math.max(0, 1 - p * 2.4));
+}
+function setProgress(v){ progress = Math.min(1, Math.max(0, v)); released = progress >= 1; applyHero(); }
+function finishHero(){
+  if (released || reduced) return;
+  const from = progress, t0 = performance.now(), dur = 500;
+  function tick(t){
+    const k = Math.min(1, (t - t0) / dur);
+    setProgress(from + (1 - from) * (1 - Math.pow(1 - k, 3)));
+    if (k < 1 && !released) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* La vidéo tourne en continu, indépendamment de l'expansion */
+if (heroVideo && !reduced){ const pv = heroVideo.play(); if (pv && pv.catch) pv.catch(function(){}); }
+
+/* Blocage / déblocage du scroll : toujours libéré à progress >= 1 */
+window.addEventListener("wheel", function(e){
+  if (document.body.classList.contains("menu-open") || document.body.classList.contains("lb-open") || document.body.classList.contains("view-open") || reduced) return;
+  if (!released){ e.preventDefault(); setProgress(progress + e.deltaY * WHEEL_F); }
+  else if (window.scrollY <= 1 && e.deltaY < 0){ e.preventDefault(); setProgress(progress + e.deltaY * WHEEL_F); }
+}, { passive: false });
+
+let touchY = null;
+window.addEventListener("touchstart", function(e){ touchY = e.touches[0].clientY; }, { passive: true });
+window.addEventListener("touchend", function(){ touchY = null; }, { passive: true });
+window.addEventListener("touchmove", function(e){
+  if (document.body.classList.contains("menu-open") || document.body.classList.contains("lb-open") || document.body.classList.contains("view-open") || reduced || touchY === null) return;
+  if (e.target && e.target.closest && e.target.closest("[data-ba]")) return;
+  const y = e.touches[0].clientY, d = touchY - y;
+  if (!released){ e.preventDefault(); touchY = y; setProgress(progress + d * TOUCH_F); }
+  else if (window.scrollY <= 1 && d < 0){ e.preventDefault(); touchY = y; setProgress(progress + d * TOUCH_F); }
+}, { passive: false });
+
+window.addEventListener("scroll", function(){ if (!released && !reduced) window.scrollTo(0, 0); });
+
+document.addEventListener("keydown", function(e){
+  if (released || reduced || document.body.classList.contains("menu-open") || document.body.classList.contains("lb-open") || document.body.classList.contains("view-open")) return;
+  if (["ArrowDown", "PageDown", " ", "Spacebar"].indexOf(e.key) !== -1){ e.preventDefault(); setProgress(progress + 0.15); }
+  else if (e.key === "End"){ e.preventDefault(); setProgress(1); }
+  else if (["ArrowUp", "PageUp", "Home"].indexOf(e.key) !== -1){ e.preventDefault(); setProgress(progress - 0.15); }
+});
+
+/* Accessibilité : si le focus part sur un élément interactif SOUS le hero verrouillé, on libère.
+   On ignore body/html (focus par défaut au chargement) pour ne pas déclencher l'expansion tout seul. */
+document.addEventListener("focusin", function(e){
+  if (released || reduced) return;
+  const t = e.target;
+  if (!t || t === document.body || t === document.documentElement) return;
+  if (t.closest && t.closest("#header, #menu, #hero, #loader")) return;
+  finishHero();
+});
+
+if (hintEl) hintEl.addEventListener("click", finishHero);
+window.addEventListener("resize", applyHero);
+
+/* ================= Démarrage ================= */
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+if (!window.location.hash) window.scrollTo(0, 0);
+setLang("fr");
+syncViewWithHash(); /* ouverture directe d'une vue via #design-3d / #galerie-complete / #avant-apres */
+if (reduced || window.location.hash){ progress = 1; released = true; }
+applyHero();
+hideLoader();
+
+})();
+</script>
+
+<!-- Netlify Identity : gère le lien d'invitation reçu par e-mail et redirige vers /admin/ -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
