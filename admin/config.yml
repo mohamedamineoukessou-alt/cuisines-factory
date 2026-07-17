@@ -10,8 +10,8 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 # Message affiché en haut de chaque brouillon (facultatif)
-site_url: https://cuisinesfactory.netlify.app
-display_url: https://cuisinesfactory.netlify.app
+site_url: https://cuisines-factory.netlify.app
+display_url: https://cuisines-factory.netlify.app
 
 collections:
   # -------- Galerie · Cuisines --------
