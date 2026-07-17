@@ -1,31 +1,31 @@
 {
   "images": [
     {
-      "image": "images/vitrines/01.jpg"
+      "image": "/assets/uploads/vitrines-01.jpg"
     },
     {
-      "image": "images/vitrines/02.jpg"
+      "image": "/assets/uploads/vitrines-02.jpg"
     },
     {
-      "image": "images/vitrines/03.jpg"
+      "image": "/assets/uploads/vitrines-03.jpg"
     },
     {
-      "image": "images/vitrines/04.jpg"
+      "image": "/assets/uploads/vitrines-04.jpg"
     },
     {
-      "image": "images/vitrines/05.jpg"
+      "image": "/assets/uploads/vitrines-05.jpg"
     },
     {
-      "image": "images/vitrines/06.jpg"
+      "image": "/assets/uploads/vitrines-06.jpg"
     },
     {
-      "image": "images/vitrines/07.jpg"
+      "image": "/assets/uploads/vitrines-07.jpg"
     },
     {
-      "image": "images/vitrines/08.jpg"
+      "image": "/assets/uploads/vitrines-08.jpg"
     },
     {
-      "image": "images/vitrines/09.jpg"
+      "image": "/assets/uploads/vitrines-09.jpg"
     }
   ]
 }

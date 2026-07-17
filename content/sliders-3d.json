@@ -1,60 +1,60 @@
 {
   "pairs": [
     {
-      "avant": "images/design-3d/avant-1.jpg",
-      "apres": "images/design-3d/apres-1.jpg"
+      "avant": "/assets/uploads/design-3d-avant-1.jpg",
+      "apres": "/assets/uploads/design-3d-apres-1.jpg"
     },
     {
-      "avant": "images/design-3d/avant-2.jpg",
-      "apres": "images/design-3d/apres-2.jpg"
+      "avant": "/assets/uploads/design-3d-avant-2.jpg",
+      "apres": "/assets/uploads/design-3d-apres-2.jpg"
     },
     {
-      "avant": "images/design-3d/avant-3.jpg",
-      "apres": "images/design-3d/apres-3.jpg"
+      "avant": "/assets/uploads/design-3d-avant-3.jpg",
+      "apres": "/assets/uploads/design-3d-apres-3.jpg"
     },
     {
-      "avant": "images/design-3d/avant-4.jpg",
-      "apres": "images/design-3d/apres-4.jpg"
+      "avant": "/assets/uploads/design-3d-avant-4.jpg",
+      "apres": "/assets/uploads/design-3d-apres-4.jpg"
     },
     {
-      "avant": "images/design-3d/avant-5.jpg",
-      "apres": "images/design-3d/apres-5.jpg"
+      "avant": "/assets/uploads/design-3d-avant-5.jpg",
+      "apres": "/assets/uploads/design-3d-apres-5.jpg"
     },
     {
-      "avant": "images/design-3d/avant-6.jpg",
-      "apres": "images/design-3d/apres-6.jpg"
+      "avant": "/assets/uploads/design-3d-avant-6.jpg",
+      "apres": "/assets/uploads/design-3d-apres-6.jpg"
     },
     {
-      "avant": "images/design-3d/avant-7.jpg",
-      "apres": "images/design-3d/apres-7.jpg"
+      "avant": "/assets/uploads/design-3d-avant-7.jpg",
+      "apres": "/assets/uploads/design-3d-apres-7.jpg"
     },
     {
-      "avant": "images/design-3d/avant-8.jpg",
-      "apres": "images/design-3d/apres-8.jpg"
+      "avant": "/assets/uploads/design-3d-avant-8.jpg",
+      "apres": "/assets/uploads/design-3d-apres-8.jpg"
     },
     {
-      "avant": "images/design-3d/avant-9.jpg",
-      "apres": "images/design-3d/apres-9.jpg"
+      "avant": "/assets/uploads/design-3d-avant-9.jpg",
+      "apres": "/assets/uploads/design-3d-apres-9.jpg"
     },
     {
-      "avant": "images/design-3d/avant-10.jpg",
-      "apres": "images/design-3d/apres-10.jpg"
+      "avant": "/assets/uploads/design-3d-avant-10.jpg",
+      "apres": "/assets/uploads/design-3d-apres-10.jpg"
     },
     {
-      "avant": "images/design-3d/avant-11.jpg",
-      "apres": "images/design-3d/apres-11.jpg"
+      "avant": "/assets/uploads/design-3d-avant-11.jpg",
+      "apres": "/assets/uploads/design-3d-apres-11.jpg"
     },
     {
-      "avant": "images/design-3d/avant-12.jpg",
-      "apres": "images/design-3d/apres-12.jpg"
+      "avant": "/assets/uploads/design-3d-avant-12.jpg",
+      "apres": "/assets/uploads/design-3d-apres-12.jpg"
     },
     {
-      "avant": "images/design-3d/avant-13.jpg",
-      "apres": "images/design-3d/apres-13.jpg"
+      "avant": "/assets/uploads/design-3d-avant-13.jpg",
+      "apres": "/assets/uploads/design-3d-apres-13.jpg"
     },
     {
-      "avant": "images/design-3d/avant-14.jpg",
-      "apres": "images/design-3d/apres-14.jpg"
+      "avant": "/assets/uploads/design-3d-avant-14.jpg",
+      "apres": "/assets/uploads/design-3d-apres-14.jpg"
     }
   ]
 }

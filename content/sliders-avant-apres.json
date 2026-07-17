@@ -1,24 +1,24 @@
 {
   "pairs": [
     {
-      "avant": "images/avant-apres/avant-1.jpg",
-      "apres": "images/avant-apres/apres-1.jpg"
+      "avant": "/assets/uploads/avant-apres-avant-1.jpg",
+      "apres": "/assets/uploads/avant-apres-apres-1.jpg"
     },
     {
-      "avant": "images/avant-apres/avant-2.jpg",
-      "apres": "images/avant-apres/apres-2.jpg"
+      "avant": "/assets/uploads/avant-apres-avant-2.jpg",
+      "apres": "/assets/uploads/avant-apres-apres-2.jpg"
     },
     {
-      "avant": "images/avant-apres/avant-3.jpg",
-      "apres": "images/avant-apres/apres-3.jpg"
+      "avant": "/assets/uploads/avant-apres-avant-3.jpg",
+      "apres": "/assets/uploads/avant-apres-apres-3.jpg"
     },
     {
-      "avant": "images/avant-apres/avant-4.jpg",
-      "apres": "images/avant-apres/apres-4.jpg"
+      "avant": "/assets/uploads/avant-apres-avant-4.jpg",
+      "apres": "/assets/uploads/avant-apres-apres-4.jpg"
     },
     {
-      "avant": "images/avant-apres/avant-5.jpg",
-      "apres": "images/avant-apres/apres-5.jpg"
+      "avant": "/assets/uploads/avant-apres-avant-5.jpg",
+      "apres": "/assets/uploads/avant-apres-apres-5.jpg"
     }
   ]
 }
