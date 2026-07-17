@@ -219,6 +219,9 @@ body.menu-open #burger span:nth-child(2){transform:translateY(-4.2px) rotate(-45
 }
 .hero-word.wl{transform:translateX(calc(var(--p,0) * -46vw))}
 .hero-word.wr{transform:translateX(calc(var(--p,0) * 46vw))}
+@media (max-width:560px){
+  .hero-word{font-size:clamp(2rem,7.6vw,2.5rem);letter-spacing:.03em}
+}
 .hero-baseline{
   position:absolute;left:0;right:0;top:calc(50% + clamp(2.2rem,5.5vw,4.4rem));
   text-align:center;z-index:3;pointer-events:none;
