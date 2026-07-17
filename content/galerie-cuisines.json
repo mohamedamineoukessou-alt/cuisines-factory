@@ -43,9 +43,6 @@
       "image": "/assets/uploads/galerie-realisation-4.jpg"
     },
     {
-      "image": "/assets/uploads/galerie-realisation-6.jpg"
-    },
-    {
       "image": "/assets/uploads/galerie-realisation-7.jpg"
     },
     {
@@ -155,6 +152,9 @@
     },
     {
       "image": "/assets/uploads/design-3d-apres-12.jpg"
+    },
+    {
+      "image": "/assets/uploads/galerie-realisation-5.jpg"
     }
   ]
 }
