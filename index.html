@@ -287,14 +287,15 @@ body.menu-open #burger span:nth-child(2){transform:translateY(-4.2px) rotate(-45
 .about-sound.is-on{background:var(--terracotta);border-color:var(--terracotta)}
 .about-sound.is-on .ic-off{display:none}
 .about-sound.is-on .ic-on{display:block}
-.v-seek{flex:1;height:5px;border-radius:999px;position:relative;cursor:pointer;background:rgba(231,228,223,.28);touch-action:none}
+.v-seek{flex:1;height:6px;border-radius:999px;position:relative;cursor:pointer;background:rgba(231,228,223,.28);touch-action:none}
+.v-seek::before{content:"";position:absolute;left:0;right:0;top:-11px;bottom:-11px}
 .v-seek-fill{height:100%;width:0;border-radius:inherit;background:var(--chene);position:relative}
 .v-seek-fill::after{
   content:"";position:absolute;top:50%;inset-inline-end:0;transform:translate(50%,-50%);
-  width:11px;height:11px;border-radius:50%;background:#C9AE86;box-shadow:0 2px 6px rgba(20,6,3,.5);
-  opacity:0;transition:opacity .2s ease;
+  width:14px;height:14px;border-radius:50%;background:#C9AE86;box-shadow:0 2px 6px rgba(20,6,3,.5);
+  transition:transform .2s ease;
 }
-.v-seek:hover .v-seek-fill::after,.v-seek:focus-visible .v-seek-fill::after{opacity:1}
+.v-seek:hover .v-seek-fill::after,.v-seek:focus-visible .v-seek-fill::after{transform:translate(50%,-50%) scale(1.25)}
 .v-seek:focus-visible{outline:2px solid var(--chene);outline-offset:3px}
 .v-time{
   flex-shrink:0;font-family:var(--font-nav);font-size:.7rem;font-weight:500;
@@ -1824,7 +1825,7 @@ if (aboutVideo){
   if (aSeek){
     aSeek.addEventListener("pointerdown", function(e){ seeking = true; try { aSeek.setPointerCapture(e.pointerId); } catch(_){} seekTo(e.clientX); });
     aSeek.addEventListener("pointermove", function(e){ if (seeking) seekTo(e.clientX); });
-    ["pointerup", "pointercancel", "pointerleave"].forEach(function(ev){ aSeek.addEventListener(ev, function(){ seeking = false; }); });
+    ["pointerup", "pointercancel"].forEach(function(ev){ aSeek.addEventListener(ev, function(){ seeking = false; }); });
     aSeek.addEventListener("keydown", function(e){
       if (!aboutVideo.duration) return;
       if (e.key === "ArrowLeft"){ e.preventDefault(); aboutVideo.currentTime = Math.max(0, aboutVideo.currentTime - 5); }
