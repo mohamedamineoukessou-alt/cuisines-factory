@@ -1,0 +1,14 @@
+{
+  "videos": [
+    {
+      "video": "/assets/notre-maison-web.mp4",
+      "poster": "/assets/notre-maison-poster.jpg",
+      "titre": "Notre maison"
+    },
+    {
+      "video": "/assets/uploads/video-cuisine-1.mp4",
+      "poster": "/assets/uploads/video-cuisine-1-poster.jpg",
+      "titre": "Cuisine sur mesure"
+    }
+  ]
+}

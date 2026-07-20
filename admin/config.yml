@@ -87,3 +87,23 @@ collections:
             fields:
               - { label: "Avant (image de gauche)", name: "avant", widget: "image" }
               - { label: "Après (image de droite)", name: "apres", widget: "image" }
+
+  # -------- Nos vidéos --------
+  - name: "videos"
+    label: "Nos vidéos"
+    label_singular: "Vidéo"
+    description: "Les vidéos de réalisations affichées dans la section « Nos vidéos ». Si la liste est vide, la section disparaît du site."
+    files:
+      - name: "videos"
+        label: "Vidéos de réalisations"
+        file: "content/videos.json"
+        fields:
+          - label: "Vidéos"
+            label_singular: "Vidéo"
+            name: "videos"
+            widget: "list"
+            summary: "{{fields.titre}}"
+            fields:
+              - { label: "Fichier vidéo (.mp4 — compressez à 5 Mo maximum)", name: "video", widget: "file", hint: "Format .mp4 uniquement. Une vidéo lourde ralentit le site : visez un clip court (15-30 s) de moins de 5 Mo." }
+              - { label: "Image de couverture", name: "poster", widget: "image", required: false, hint: "Facultatif mais recommandé : c'est l'image affichée avant la lecture. Environ 1200 px de large." }
+              - { label: "Titre", name: "titre", widget: "string", required: false, hint: "Facultatif. Affiché sous la vidéo, ex. « Cuisine laquée · Villa Harhoura »." }

@@ -131,14 +131,19 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:500;line-height:1.12}
 }
 .desktop-nav a:hover{color:var(--ivoire)}
 .desktop-nav a:hover::after{transform:scaleX(1)}
-@media (min-width:1024px){
+/* Barre desktop : 8 entrées (une par carte). Priorité aux titres, le wordmark
+   « CUISINES FACTORY » s'efface en premier quand la place manque (logo seul).
+   Mesuré : nav compacte + logo seul = 969px · + wordmark = 1153px · nav normale + wordmark = 1370px */
+@media (min-width:980px){
   .desktop-nav{display:flex;flex:1;justify-content:center}
   #header #burger{display:none}
 }
-@media (min-width:1024px) and (max-width:1180px){
-  .desktop-nav{gap:1rem}
-  .desktop-nav a{font-size:.79rem}
-  .brandmark .wordmark{display:none}
+@media (min-width:980px) and (max-width:1439px){
+  .desktop-nav{gap:.9rem}
+  .desktop-nav a{font-size:.78rem}
+}
+@media (min-width:980px) and (max-width:1199px){
+  .brandmark .wordmark{display:none}   /* place insuffisante -> logo seul */
 }
 
 .lang-switch{display:flex;align-items:center;gap:4px;font-family:var(--font-nav);font-size:.74rem;font-weight:600;letter-spacing:.12em}
@@ -355,6 +360,72 @@ body.menu-open #burger span:nth-child(2){transform:translateY(-4.2px) rotate(-45
 .gal-teaser .gal-item{margin:0;aspect-ratio:4/5;break-inside:auto}
 .gal-teaser .gal-item img{width:100%;height:100%;object-fit:cover}
 @media (max-width:760px){.gal-teaser{grid-template-columns:repeat(2,1fr)}}
+
+/* Nos vidéos : aucune vidéo dans la section elle-même (choix client) — les lecteurs
+   vivent uniquement dans la vue plein écran ouverte par « Découvrir ».
+   preload=none -> rien ne se télécharge tant que la lecture n'est pas lancée. */
+#videos-section[hidden]{display:none}
+/* Vidéo vedette de la section (la 1re de la liste admin) */
+.vid-featured{max-width:420px;margin-inline:auto;width:100%}
+.vid-featured figure{margin:0}
+.vid-featured video{
+  width:100%;display:block;aspect-ratio:4/5;object-fit:cover;
+  border-radius:var(--r-media);background:var(--noyer);box-shadow:0 26px 60px rgba(94,34,21,.16);
+}
+.vid-featured figcaption{font-family:var(--font-nav);font-size:.86rem;color:var(--grege);margin-top:.7rem;text-align:start}
+
+/* ---------- Vue « Notre maison » (ex-page notre-maison.html, portée en vue interne).
+     Classes préfixées nm- : index.html a déjà ses propres .pillar/.pillars (autre design). ---------- */
+.nm-banner{
+  background-image:radial-gradient(120% 90% at 50% -10%,rgba(168,137,100,.18),transparent 60%),radial-gradient(90% 70% at 100% 100%,rgba(138,46,38,.08),transparent 55%);
+  padding:clamp(2rem,5vw,3.4rem) 0 clamp(2.6rem,6vw,4rem);text-align:center;
+  border-bottom:1px solid rgba(168,137,100,.25);
+}
+.nm-rule{width:54px;height:2px;background:var(--terracotta);margin:1.3rem auto 0;border-radius:2px}
+.nm-pillars{display:grid;grid-template-columns:repeat(4,1fr);max-width:920px;margin:clamp(2.6rem,5vw,3.8rem) auto 0}
+.nm-pillar{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 clamp(.6rem,2vw,1.6rem)}
+.nm-pillar + .nm-pillar::before{content:"";position:absolute;inset-inline-start:0;top:8%;height:84%;width:1px;background:rgba(154,136,109,.42)}
+.nm-pillar-icon{
+  width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--terracotta);background:rgba(138,46,38,.06);border:1px solid rgba(138,46,38,.16);
+  margin-bottom:1.1rem;transition:transform .3s var(--ease),background .3s ease,color .3s ease;
+}
+.nm-pillar-icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.nm-pillar-label{font-family:var(--font-nav);font-weight:600;font-size:.92rem;color:var(--noyer);letter-spacing:.01em;max-width:14ch}
+.nm-pillar:hover .nm-pillar-icon{transform:translateY(-4px);background:var(--terracotta);color:var(--ivoire)}
+.nm-feature{padding:clamp(2.6rem,6vw,4.4rem) 0}
+.nm-feature + .nm-feature{border-top:1px solid rgba(168,137,100,.18)}
+.nm-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5.5vw,5rem);align-items:center}
+.nm-feature-media{
+  position:relative;aspect-ratio:4/5;max-height:560px;width:100%;margin-inline:auto;
+  border-radius:var(--r-media);overflow:hidden;background:var(--noyer);box-shadow:0 26px 60px rgba(94,34,21,.16);
+}
+.nm-feature-media img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.nm-feature-media:hover img{transform:scale(1.045)}
+.nm-feature-media::after{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid rgba(168,137,100,.28);pointer-events:none}
+.nm-feature-title{font-size:clamp(1.8rem,4vw,2.7rem);color:var(--noyer);letter-spacing:.005em}
+.nm-feature-sub{font-family:var(--font-nav);font-weight:500;color:var(--terracotta);font-size:1.02rem;margin-top:.9rem;line-height:1.5}
+.nm-feature-text p{color:#4a3a2e;margin-top:1.2rem;max-width:52ch}
+.nm-feature-text p strong{color:var(--terracotta);font-weight:600}
+[dir="rtl"] .nm-feature-text p{max-width:none}
+.nm-blum-list{list-style:none;margin-top:1.4rem;display:flex;flex-direction:column;gap:.85rem}
+.nm-blum-list li{position:relative;padding-inline-start:1.7rem;color:#4a3a2e;max-width:52ch}
+.nm-blum-list li::before{content:"";position:absolute;inset-inline-start:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--terracotta)}
+.nm-blum-list li.note{color:var(--grege);font-style:italic;padding-top:.3rem}
+.nm-blum-list li.note::before{background:transparent;border:1px solid var(--chene);top:.6em}
+@media (max-width:820px){
+  .nm-feature-grid{grid-template-columns:1fr;gap:clamp(1.8rem,5vw,2.6rem)}
+  .nm-feature-media{order:-1;max-width:440px;max-height:520px}
+}
+@media (max-width:640px){
+  .nm-pillars{grid-template-columns:repeat(2,1fr);gap:2.6rem 0;max-width:420px}
+  .nm-pillar + .nm-pillar::before{display:none}
+}
+.vid-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(2rem,4.5vw,3.2rem);margin-top:clamp(2.2rem,5vw,3.4rem)}
+.vid-grid figure{margin:0}
+.vid-grid video{width:100%;display:block;border-radius:var(--r-media);background:var(--noyer);aspect-ratio:4/5;object-fit:cover}
+.vid-grid figcaption{font-family:var(--font-nav);font-size:.86rem;color:var(--grege);margin-top:.7rem;text-align:start}
+@media (max-width:900px){.vid-grid{grid-template-columns:1fr}}
 
 /* Lightbox */
 #lightbox{
@@ -696,8 +767,10 @@ footer .socials{justify-content:center;margin-top:1.6rem}
   </a>
   <nav class="desktop-nav" aria-label="Navigation principale">
     <a href="#apropos" data-i18n="hnav_apropos">Notre maison</a>
+    <a href="#design-manifeste" data-i18n="hnav_design">Le Design Manifesté</a>
     <a href="#galerie" data-i18n="hnav_galerie">Galerie</a>
     <a href="#realisations" data-i18n="hnav_realisations">Nos avant-après</a>
+    <a href="#videos-section" data-i18n="hnav_videos">Nos vidéos</a>
     <a href="#marques" data-i18n="hnav_marques">Nos marques</a>
     <a href="#avis" data-i18n="hnav_avis">Avis</a>
     <a href="#contact" data-i18n="hnav_contact">Contact</a>
@@ -721,6 +794,7 @@ footer .socials{justify-content:center;margin-top:1.6rem}
       <a href="#apropos" data-i18n="nav_apropos">À propos</a>
       <a href="#galerie" data-i18n="nav_galerie">Galerie</a>
       <a href="#realisations" data-i18n="nav_realisations">Avant / Après</a>
+      <a href="#videos-section" data-i18n="nav_videos">Nos vidéos</a>
       <a href="#marques" data-i18n="nav_marques">Nos marques</a>
       <a href="#avis" data-i18n="nav_avis">Avis clients</a>
       <a href="#contact" data-i18n="nav_contact">Rendez-vous</a>
@@ -781,14 +855,14 @@ footer .socials{justify-content:center;margin-top:1.6rem}
         <p data-i18n="about_p1">Cuisines Factory est né d'une conviction : une cuisine d'exception se dessine autour de celles et ceux qui la vivent. Dans notre atelier de Témara, chaque projet est conçu, fabriqué et posé sur mesure, du premier trait de crayon à la dernière poignée.</p>
         <p data-i18n="about_p2">Forts de plus de 20 ans d'expérience acquise en Suisse, nous rapportons au Maroc une exigence helvétique : précision millimétrée, quincaillerie allemande, matières nobles. Céramique, quartz et granit composent des pièces pensées pour durer.</p>
         <p data-i18n="about_p3">Notre accompagnement couvre tout le parcours : conception 3D réaliste pour visualiser votre projet, fabrication dans nos ateliers, pose soignée par nos équipes. Plus de 500 réalisations au Maroc en témoignent.</p>
-        <a class="btn-discover about-more" href="notre-maison.html?v=2" target="_blank" rel="noopener">
+        <button class="btn-discover about-more" type="button" data-view="notre-maison">
           <span data-i18n="about_more">En savoir plus sur nous</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
-        </a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
       </div>
       <div class="about-visual reveal">
         <div class="frame">
-          <video id="about-video" muted loop playsinline preload="metadata" poster="assets/notre-maison-poster.jpg?v=3" width="562" height="1000" aria-label="Cuisine sur mesure réalisée par Cuisines Factory"></video>
+          <video id="about-video" muted loop playsinline preload="metadata" poster="assets/notre-maison-poster-2.jpg?v=4" width="720" height="1280" aria-label="Cuisine sur mesure réalisée par Cuisines Factory"></video>
           <div class="v-bar" role="group" aria-label="Lecture vidéo">
             <button class="v-btn" id="about-play" type="button" data-i18n-aria="v_play" aria-label="Lecture">
               <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -919,6 +993,28 @@ footer .socials{justify-content:center;margin-top:1.6rem}
           </button>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6bis · Nos vidéos (masqué tant qu'aucune vidéo n'est publiée depuis l'admin) -->
+<section id="videos-section" class="section-pad" hidden>
+  <div class="container">
+    <div class="d3-split">
+      <div class="d3-text reveal">
+        <span class="eyebrow" data-i18n="vid_eyebrow">Nos vidéos</span>
+        <h2 class="section-title" data-i18n="vid_title">Nos réalisations en vidéo</h2>
+        <p class="section-sub" data-i18n="vid_sub">Découvrez nos cuisines en mouvement.</p>
+        <p class="section-desc" data-i18n="vid_desc">Rien ne remplace le geste : ouvrez un tiroir, suivez une lumière, parcourez un plan de travail. Nos vidéos vous font entrer dans les cuisines que nous avons livrées.</p>
+        <div class="discover-row start">
+          <button class="btn-discover" type="button" data-view="videos">
+            <span data-i18n="btn_discover">Découvrir</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- vidéo vedette = la 1re de la liste dans l'admin -->
+      <div class="vid-featured reveal" id="vid-card"></div>
     </div>
   </div>
 </section>
@@ -1110,6 +1206,7 @@ footer .socials{justify-content:center;margin-top:1.6rem}
       <a href="#apropos" data-i18n="nav_apropos">À propos</a>
       <a href="#galerie" data-i18n="nav_galerie">Galerie</a>
       <a href="#realisations" data-i18n="nav_realisations">Avant / Après</a>
+      <a href="#videos-section" data-i18n="nav_videos">Nos vidéos</a>
       <a href="#marques" data-i18n="nav_marques">Nos marques</a>
       <a href="#avis" data-i18n="nav_avis">Avis clients</a>
       <a href="#contact" data-i18n="nav_contact">Rendez-vous</a>
@@ -1190,6 +1287,107 @@ footer .socials{justify-content:center;margin-top:1.6rem}
   </div>
 </section>
 
+<section class="view" id="videos" role="dialog" aria-modal="true" aria-labelledby="vt-vid" tabindex="-1">
+  <div class="view-bar">
+    <button class="view-back" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      <span data-i18n="btn_back">Retour</span>
+    </button>
+  </div>
+  <div class="container view-inner">
+    <header class="view-head">
+      <h2 class="section-title" id="vt-vid" data-i18n="vid_title">Nos réalisations en vidéo</h2>
+      <p class="section-sub" data-i18n="vid_sub">Découvrez nos cuisines en mouvement.</p>
+    </header>
+    <div class="vid-grid" id="vid-view"></div>
+  </div>
+</section>
+
+<section class="view" id="notre-maison" role="dialog" aria-modal="true" aria-labelledby="vt-nm" tabindex="-1">
+  <div class="view-bar">
+    <button class="view-back" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      <span data-i18n="btn_back">Retour</span>
+    </button>
+  </div>
+  <div class="container view-inner">
+    <header class="nm-banner">
+      <span class="eyebrow" data-i18n="banner_eyebrow">Notre maison</span>
+      <h2 class="section-title" id="vt-nm" data-i18n="banner_title">Unique comme vous</h2>
+      <div class="nm-rule" aria-hidden="true"></div>
+      <div class="nm-pillars">
+        <div class="nm-pillar">
+          <span class="nm-pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+          </span>
+          <span class="nm-pillar-label" data-i18n="pillar_1">Construit pour durer</span>
+        </div>
+        <div class="nm-pillar">
+          <span class="nm-pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+          </span>
+          <span class="nm-pillar-label" data-i18n="pillar_2">Projet personnalisé</span>
+        </div>
+        <div class="nm-pillar">
+          <span class="nm-pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 4 3 6.2v13.8l6-2.2 6 2.2 6-2.2V4l-6 2.2L9 4z"/><path d="M9 4v13.8M15 6.2V20"/></svg>
+          </span>
+          <span class="nm-pillar-label" data-i18n="pillar_3">Fabrication Européenne</span>
+        </div>
+        <div class="nm-pillar">
+          <span class="nm-pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 9.5 12 5 2 9.5l10 4.5 10-4.5z"/><path d="M6 11.4V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.6"/><path d="M22 9.5V15"/></svg>
+          </span>
+          <span class="nm-pillar-label" data-i18n="pillar_4">Des concepteurs formés</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="nm-feature">
+      <div class="nm-feature-grid">
+        <div class="nm-feature-media">
+          <img src="images/cuisines-4k/01.jpg" alt="Cuisine sur mesure en bois chaud et pierre, réalisée par Cuisines Factory" width="1600" height="2000" loading="lazy">
+        </div>
+        <div class="nm-feature-text">
+          <h3 class="nm-feature-title" data-i18n="s2_title">Des aménagements sur mesure uniques</h3>
+          <p data-i18n="s2_p">Choisir Cuisines Factory, c'est choisir l'équation parfaite entre savoir-faire européen et accompagnement sur mesure. Depuis plus de 20 ans, nous concevons et fabriquons tous nos meubles pour vos aménagements intérieurs. Nous faisons de chaque projet une réalisation sur mesure pour faire de votre espace de vie un lieu unique, comme vous.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="nm-feature">
+      <div class="nm-feature-grid">
+        <div class="nm-feature-text">
+          <h3 class="nm-feature-title" data-i18n="s3_title">Découvrez nos collections</h3>
+          <p class="nm-feature-sub" data-i18n="s3_sub">Inspirez-vous, de la cuisine au dressing jusqu'à la création de meubles sur mesure.</p>
+          <p data-i18n="s3_intro">Nos charnières et tiroirs proviennent de la marque autrichienne Blum, le N°1 mondial des solutions de ferrures :</p>
+          <ul class="nm-blum-list">
+            <li data-i18n="s3_li1">Systèmes de portes relevables</li>
+            <li data-i18n="s3_li2">Systèmes de charnières</li>
+            <li data-i18n="s3_li3">Systèmes coulissants</li>
+            <li class="note" data-i18n="s3_li4">Conçu pour une durabilité inégalée afin de garantir un usage fluide de votre cuisine.</li>
+          </ul>
+        </div>
+        <div class="nm-feature-media">
+          <img src="images/galerie-realisation/2.jpg" alt="Cuisine sur mesure haut de gamme réalisée par Cuisines Factory" width="1280" height="1119" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="nm-feature">
+      <div class="nm-feature-grid">
+        <div class="nm-feature-media">
+          <img src="images/galerie-realisation/19.jpg" alt="Cuisine élégante réalisée par Cuisines Factory, savoir-faire d'atelier" width="1280" height="960" loading="lazy">
+        </div>
+        <div class="nm-feature-text">
+          <h3 class="nm-feature-title" data-i18n="s4_title">Privilégiez le savoir-faire suisse</h3>
+          <p data-i18n-html="s4_p">Avec <strong>plus de 500 réalisations</strong> à notre actif, vous avez la garantie d'être conseillé et accompagné jusqu'à trouver la conception parfaite pour votre future cuisine équipée. Nous sommes également spécialisés dans la <strong>cuisine sur mesure</strong>, adaptée précisément à vos besoins et à votre espace. La mise en œuvre de votre projet sera ensuite confiée à notre équipe de professionnels aguerris, avec qui nous entretenons une collaboration étroite.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
 <noscript>
 <style>
   #loader{display:none}
@@ -1207,10 +1405,10 @@ const translations = {
   fr: {
     meta_title: "Cuisines Factory · Cuisines sur mesure haut de gamme à Témara & Rabat",
     meta_desc: "Cuisines Factory conçoit, fabrique et pose des cuisines sur mesure haut de gamme à Rabat et Témara. Plus de 20 ans d'expérience en Suisse, conception 3D, matières nobles.",
-    nav_apropos: "À propos", nav_galerie: "Galerie", nav_realisations: "Avant / Après",
+    nav_apropos: "À propos", nav_galerie: "Galerie", nav_realisations: "Avant / Après", nav_videos: "Nos vidéos",
     nav_marques: "Nos marques", nav_avis: "Avis clients", nav_contact: "Rendez-vous",
     menu_addr_k: "Adresse", menu_tel_k: "Téléphone", menu_social_k: "Réseaux",
-    hnav_apropos: "Notre maison", hnav_galerie: "Galerie", hnav_realisations: "Nos avant-après", hnav_marques: "Nos marques", hnav_avis: "Avis", hnav_contact: "Contact",
+    hnav_apropos: "Notre maison", hnav_design: "Le Design Manifesté", hnav_galerie: "Galerie", hnav_realisations: "Nos avant-après", hnav_videos: "Nos vidéos", hnav_marques: "Nos marques", hnav_avis: "Avis", hnav_contact: "Contact",
     d3_title: "Le Design Manifesté", d3_slogan: "Des conceptions 3D devenues réalité",
     d3_desc: "De la modélisation numérique à la maîtrise artisanale : l'exactitude de nos rendus devient votre espace de vie.",
     btn_discover: "Découvrir", btn_back: "Retour",
@@ -1238,6 +1436,21 @@ const translations = {
     g5: "Villa Témara", g6: "Résidence Prestigia", g7: "Villa Aïn Attig", g8: "Appartement L'Océan",
     ba_eyebrow: "Nos avant-après", ba_title: "Avant / Après",
     ba_sub: "Faites glisser le curseur pour découvrir la transformation.",
+    banner_eyebrow: "Notre maison", banner_title: "Unique comme vous",
+    pillar_1: "Construit pour durer", pillar_2: "Projet personnalisé",
+    pillar_3: "Fabrication Européenne", pillar_4: "Des concepteurs formés",
+    s2_title: "Des aménagements sur mesure uniques",
+    s2_p: "Choisir Cuisines Factory, c'est choisir l'équation parfaite entre savoir-faire européen et accompagnement sur mesure. Depuis plus de 20 ans, nous concevons et fabriquons tous nos meubles pour vos aménagements intérieurs. Nous faisons de chaque projet une réalisation sur mesure pour faire de votre espace de vie un lieu unique, comme vous.",
+    s3_title: "Découvrez nos collections",
+    s3_sub: "Inspirez-vous, de la cuisine au dressing jusqu'à la création de meubles sur mesure.",
+    s3_intro: "Nos charnières et tiroirs proviennent de la marque autrichienne Blum, le N°1 mondial des solutions de ferrures :",
+    s3_li1: "Systèmes de portes relevables", s3_li2: "Systèmes de charnières", s3_li3: "Systèmes coulissants",
+    s3_li4: "Conçu pour une durabilité inégalée afin de garantir un usage fluide de votre cuisine.",
+    s4_title: "Privilégiez le savoir-faire suisse",
+    s4_p: "Avec <strong>plus de 500 réalisations</strong> à notre actif, vous avez la garantie d'être conseillé et accompagné jusqu'à trouver la conception parfaite pour votre future cuisine équipée. Nous sommes également spécialisés dans la <strong>cuisine sur mesure</strong>, adaptée précisément à vos besoins et à votre espace. La mise en œuvre de votre projet sera ensuite confiée à notre équipe de professionnels aguerris, avec qui nous entretenons une collaboration étroite.",
+    vid_eyebrow: "Nos vidéos", vid_title: "Nos réalisations en vidéo",
+    vid_sub: "Découvrez nos cuisines en mouvement.",
+    vid_desc: "Rien ne remplace le geste : ouvrez un tiroir, suivez une lumière, parcourez un plan de travail. Nos vidéos vous font entrer dans les cuisines que nous avons livrées.",
     ba_before: "Avant", ba_after: "Après",
     ba_c1: "Rénovation complète", ba_l1: "Villa · Harhoura",
     ba_c2: "Cuisine ouverte sur séjour", ba_l2: "Appartement · Hay Riad",
@@ -1268,10 +1481,10 @@ const translations = {
   ar: {
     meta_title: "كوزين فاكتوري · مطابخ راقية مصممة حسب الطلب بتمارة والرباط",
     meta_desc: "كوزين فاكتوري تصمم وتصنع وتركب مطابخ راقية حسب الطلب في الرباط وتمارة. أكثر من 20 سنة من الخبرة في سويسرا، تصميم ثلاثي الأبعاد وخامات نبيلة.",
-    nav_apropos: "من نحن", nav_galerie: "المعرض", nav_realisations: "قبل / بعد",
+    nav_apropos: "من نحن", nav_galerie: "المعرض", nav_realisations: "قبل / بعد", nav_videos: "فيديوهاتنا",
     nav_marques: "علاماتنا الشريكة", nav_avis: "آراء العملاء", nav_contact: "حجز موعد",
     menu_addr_k: "العنوان", menu_tel_k: "الهاتف", menu_social_k: "تابعونا",
-    hnav_apropos: "دارُنا", hnav_galerie: "المعرض", hnav_realisations: "قبل / بعد", hnav_marques: "علاماتنا", hnav_avis: "الآراء", hnav_contact: "اتصلوا بنا",
+    hnav_apropos: "دارُنا", hnav_design: "التصميم يتجسّد", hnav_galerie: "المعرض", hnav_realisations: "قبل / بعد", hnav_videos: "فيديوهاتنا", hnav_marques: "علاماتنا", hnav_avis: "الآراء", hnav_contact: "اتصلوا بنا",
     d3_title: "التصميم يتجسّد", d3_slogan: "تصاميم ثلاثية الأبعاد صارت واقعاً",
     d3_desc: "من النمذجة الرقمية إلى الإتقان الحِرفي: دقّة تصاميمنا تصبح فضاء عيشكم.",
     btn_discover: "اكتشفوا", btn_back: "رجوع",
@@ -1299,6 +1512,21 @@ const translations = {
     g5: "فيلا تمارة", g6: "إقامة برستيجيا", g7: "فيلا عين عتيق", g8: "شقة المحيط",
     ba_eyebrow: "قبل / بعد عندنا", ba_title: "قبل / بعد",
     ba_sub: "اسحبوا المؤشر لاكتشاف التحوّل.",
+    banner_eyebrow: "دارُنا", banner_title: "فريدٌ مثلكم",
+    pillar_1: "صُنع ليدوم", pillar_2: "مشروع مخصّص",
+    pillar_3: "تصنيع أوروبي", pillar_4: "مصمّمون مؤهّلون",
+    s2_title: "تجهيزات فريدة مصمَّمة على المقاس",
+    s2_p: "اختيار كوزين فاكتوري يعني اختيار المعادلة المثالية بين الحرفية الأوروبية والمرافقة المفصّلة على المقاس. منذ أكثر من 20 عامًا، نصمّم ونصنع كل أثاثنا لتجهيز فضاءاتكم الداخلية. نحوّل كل مشروع إلى إنجاز على المقاس ليصبح فضاء عيشكم مكانًا فريدًا مثلكم.",
+    s3_title: "اكتشفوا مجموعاتنا",
+    s3_sub: "استلهموا، من المطبخ إلى غرفة الملابس وصولًا إلى صناعة الأثاث على المقاس.",
+    s3_intro: "مفصّلاتنا وأدراجنا من العلامة النمساوية Blum، الأولى عالميًا في حلول التجهيزات المعدنية:",
+    s3_li1: "أنظمة الأبواب المرفوعة", s3_li2: "أنظمة المفصّلات", s3_li3: "الأنظمة المنزلقة",
+    s3_li4: "مصمَّمة لمتانة لا تُضاهى تضمن استعمالًا سلسًا لمطبخكم.",
+    s4_title: "اختاروا الحرفية السويسرية",
+    s4_p: "برصيد <strong>أكثر من 500 إنجاز</strong>، لكم ضمان المشورة والمرافقة حتى الوصول إلى التصميم المثالي لمطبخكم المجهّز المقبل. كما نتخصّص في <strong>المطبخ المفصّل على المقاس</strong>، المكيّف تمامًا مع احتياجاتكم وفضائكم. ثمّ يُعهد بتنفيذ مشروعكم إلى فريقنا من المحترفين المخضرمين الذين تربطنا بهم شراكة وثيقة.",
+    vid_eyebrow: "فيديوهاتنا", vid_title: "إنجازاتنا بالفيديو",
+    vid_sub: "اكتشفوا مطابخنا في حركتها.",
+    vid_desc: "لا شيء يعوّض الإحساس المباشر: افتحوا درجًا، تتبّعوا انعكاس الضوء، امسحوا سطح العمل بأعينكم. تأخذكم فيديوهاتنا إلى داخل المطابخ التي أنجزناها.",
     ba_before: "قبل", ba_after: "بعد",
     ba_c1: "تجديد شامل", ba_l1: "فيلا · الهرهورة",
     ba_c2: "مطبخ مفتوح على الصالون", ba_l2: "شقة · حي الرياض",
@@ -1329,10 +1557,10 @@ const translations = {
   en: {
     meta_title: "Cuisines Factory · High-end custom kitchens in Temara & Rabat",
     meta_desc: "Cuisines Factory designs, builds and installs high-end custom kitchens in Rabat and Temara. Over 20 years of experience in Switzerland, 3D design, noble materials.",
-    nav_apropos: "About us", nav_galerie: "Gallery", nav_realisations: "Before / After",
+    nav_apropos: "About us", nav_galerie: "Gallery", nav_realisations: "Before / After", nav_videos: "Our videos",
     nav_marques: "Our brands", nav_avis: "Client reviews", nav_contact: "Book a visit",
     menu_addr_k: "Address", menu_tel_k: "Phone", menu_social_k: "Follow us",
-    hnav_apropos: "Our house", hnav_galerie: "Gallery", hnav_realisations: "Before / After", hnav_marques: "Our brands", hnav_avis: "Reviews", hnav_contact: "Contact",
+    hnav_apropos: "Our house", hnav_design: "Design Made Real", hnav_galerie: "Gallery", hnav_realisations: "Before / After", hnav_videos: "Our videos", hnav_marques: "Our brands", hnav_avis: "Reviews", hnav_contact: "Contact",
     d3_title: "Design Made Real", d3_slogan: "3D concepts brought to life",
     d3_desc: "From digital modeling to artisanal mastery: the precision of our renders becomes your living space.",
     btn_discover: "Discover", btn_back: "Back",
@@ -1360,6 +1588,21 @@ const translations = {
     g5: "Temara Villa", g6: "Prestigia Residence", g7: "Ain Attig Villa", g8: "Ocean View Apartment",
     ba_eyebrow: "Our before & after", ba_title: "Before / After",
     ba_sub: "Drag the handle to reveal the transformation.",
+    banner_eyebrow: "Our house", banner_title: "Unique, like you",
+    pillar_1: "Built to last", pillar_2: "Tailored project",
+    pillar_3: "European craftsmanship", pillar_4: "Trained designers",
+    s2_title: "Uniquely bespoke interiors",
+    s2_p: "Choosing Cuisines Factory means choosing the perfect balance between European craftsmanship and bespoke support. For over 20 years, we have designed and manufactured all our furniture for your interior spaces. We turn every project into a made-to-measure creation, making your living space a place as unique as you are.",
+    s3_title: "Discover our collections",
+    s3_sub: "Find inspiration, from the kitchen to the dressing room and bespoke furniture.",
+    s3_intro: "Our hinges and drawers come from the Austrian brand Blum, the world's number one in hardware solutions:",
+    s3_li1: "Lift-up door systems", s3_li2: "Hinge systems", s3_li3: "Sliding systems",
+    s3_li4: "Engineered for unmatched durability, keeping your kitchen running smoothly.",
+    s4_title: "Choose Swiss craftsmanship",
+    s4_p: "With <strong>more than 500 completed projects</strong> to our name, you are guaranteed advice and support until we find the perfect design for your future fitted kitchen. We also specialise in <strong>bespoke kitchens</strong>, tailored precisely to your needs and your space. Your project is then entrusted to our team of seasoned professionals, with whom we work hand in hand.",
+    vid_eyebrow: "Our videos", vid_title: "Our projects on video",
+    vid_sub: "See our kitchens in motion.",
+    vid_desc: "Nothing replaces the gesture: open a drawer, follow the light, run your eye along a worktop. Our videos take you inside the kitchens we have delivered.",
     ba_before: "Before", ba_after: "After",
     ba_c1: "Full renovation", ba_l1: "Villa · Harhoura",
     ba_c2: "Open-plan kitchen", ba_l2: "Apartment · Hay Riad",
@@ -1429,6 +1672,8 @@ let baPairs = [
   { avant: "images/avant-apres/avant-4.jpg", apres: "images/avant-apres/apres-4.jpg", w: 1280, h: 720 },
   { avant: "images/avant-apres/avant-5.jpg", apres: "images/avant-apres/apres-5.jpg", w: 1280, h: 853 }
 ];
+/* Nos vidéos : alimenté par content/videos.json (admin). Vide par défaut -> section masquée. */
+let videos = [];
 /* Galerie · catégorie CUISINES : photos existantes + nouvelles Cuisine_4K */
 let galCuisines = [
   { src: "images/cuisines-4k/01.jpg", w: 1600, h: 2000 },
@@ -1527,6 +1772,23 @@ function buildSlider(pair, defer, ratio, labelKey){
     '<span class="ba-label lab-after" data-i18n="ba_after">Après</span>';
   return el;
 }
+/* Lecteur de la vue plein écran : preload=none -> aucun octet tant qu'on ne lance pas la lecture */
+function videoPlayer(v){
+  const f = document.createElement("figure");
+  const el = document.createElement("video");
+  el.setAttribute("controls", "");
+  el.setAttribute("playsinline", "");
+  el.setAttribute("preload", "none");
+  if (v.poster) el.setAttribute("poster", v.poster);
+  el.src = v.video;
+  f.appendChild(el);
+  if (v.titre){
+    const c = document.createElement("figcaption");
+    c.textContent = v.titre;
+    f.appendChild(c);
+  }
+  return f;
+}
 function galButton(im, list, idx){
   const b = document.createElement("button");
   b.className = "gal-item";
@@ -1547,6 +1809,14 @@ function buildAll(){
   const featBa = baPairs[2] || baPairs[0];
   if (featBa) fill("#ba-card", [ buildSlider(featBa, false, "4 / 3") ]);
   fill("#ba-view", baPairs.map(function(p){ return buildSlider(p, true, "4 / 3"); }));
+
+  /* Nos vidéos : section masquée tant qu'aucune vidéo n'est publiée (le site ne montre jamais de vide) */
+  const vidSection = $("#videos-section");
+  if (vidSection) vidSection.hidden = !videos.length;
+  /* Pas de lien de nav vers une section masquée (header, menu burger, pied de page) */
+  $$('a[href="#videos-section"]').forEach(function(a){ a.hidden = !videos.length; });
+  if (videos[0]) fill("#vid-card", [ videoPlayer(videos[0]) ]);
+  fill("#vid-view", videos.map(function(v){ return videoPlayer(v); }));
 
   /* Carte teaser galerie : 2 cuisines + 2 vitrines en alternance (uniquement si l'image existe) */
   const galTeaser = [
@@ -1575,11 +1845,13 @@ function buildAll(){
 function loadContent(){
   const toImgs = function(d){ return (d && Array.isArray(d.images)) ? d.images.map(function(o){ return { src: o.image }; }).filter(function(o){ return o.src; }) : null; };
   const toPairs = function(d){ return (d && Array.isArray(d.pairs)) ? d.pairs.map(function(o){ return { avant: o.avant, apres: o.apres }; }).filter(function(o){ return o.avant && o.apres; }) : null; };
+  const toVids  = function(d){ return (d && Array.isArray(d.videos)) ? d.videos.map(function(o){ return { video: o.video, poster: o.poster, titre: o.titre }; }).filter(function(o){ return o.video; }) : null; };
   const jobs = [
     ["content/galerie-cuisines.json",     function(d){ const v = toImgs(d);  if (v && v.length) galCuisines = v; }],
     ["content/galerie-vitrines.json",     function(d){ const v = toImgs(d);  if (v && v.length) galVitrines = v; }],
     ["content/sliders-3d.json",           function(d){ const v = toPairs(d); if (v && v.length) design3dPairs = v; }],
-    ["content/sliders-avant-apres.json",  function(d){ const v = toPairs(d); if (v && v.length) baPairs = v; }]
+    ["content/sliders-avant-apres.json",  function(d){ const v = toPairs(d); if (v && v.length) baPairs = v; }],
+    ["content/videos.json",               function(d){ const v = toVids(d);  if (v) videos = v; }]
   ];
   return Promise.all(jobs.map(function(j){
     return fetch(j[0], { cache: "no-cache" })
@@ -1612,7 +1884,7 @@ $$(".gal-tab").forEach(function(tab){
 loadContent().then(buildAll);
 
 /* ================= Vues plein écran internes (Découvrir) ================= */
-const VIEW_IDS = ["design-3d", "galerie-complete", "avant-apres"];
+const VIEW_IDS = ["design-3d", "galerie-complete", "avant-apres", "videos", "notre-maison"];
 let currentView = null, viewTrigger = null;
 
 function openView(id){
@@ -1678,6 +1950,11 @@ function setLang(lang){
   $$("[data-i18n]").forEach(function(el){
     const v = t[el.getAttribute("data-i18n")];
     if (v !== undefined) el.textContent = v;
+  });
+  /* Textes contenant du balisage (ex. <strong> dans la vue Notre maison) */
+  $$("[data-i18n-html]").forEach(function(el){
+    const v = t[el.getAttribute("data-i18n-html")];
+    if (v !== undefined) el.innerHTML = v;
   });
   $$("[data-i18n-aria]").forEach(function(el){
     const v = t[el.getAttribute("data-i18n-aria")];
@@ -1777,7 +2054,7 @@ if (aboutVideo){
   function loadSrc(){
     if (srcLoaded) return;
     const s = document.createElement("source");
-    s.src = "assets/notre-maison-web.mp4?v=3"; s.type = "video/mp4";
+    s.src = "assets/notre-maison-web-2.mp4?v=4"; s.type = "video/mp4";
     aboutVideo.appendChild(s); aboutVideo.load(); srcLoaded = true;
   }
   function fmt(t){ t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); }

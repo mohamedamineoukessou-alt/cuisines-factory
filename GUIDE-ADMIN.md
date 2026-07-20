@@ -40,6 +40,7 @@ L'admin a besoin que le site soit hébergé sur **GitHub + Netlify connectés**
 2. Choisissez une rubrique dans le menu de gauche :
    - **Galerie · Cuisines** / **Galerie · Vitrines** → la liste des photos.
    - **Sliders · Design 3D** / **Sliders · Avant / Après** → les comparateurs (2 images chacun).
+   - **Nos vidéos** → les vidéos de réalisations (voir le point 3 bis ci-dessous).
 3. Pour **ajouter** : bouton « Add … », puis **glissez une image** (ou choisissez-en
    une déjà présente). Pour **réordonner** : glissez les lignes. Pour **supprimer** :
    l'icône de suppression de la ligne.
@@ -57,6 +58,32 @@ du téléphone/appareil, sinon le site s'alourdit. Avant d'uploader, réduisez-l
 - Les **vitrines** en carré ou portrait.
 - Pour un **slider**, les deux images (avant/après ou plan 3D/réalisation) doivent
   cadrer la même scène pour un rendu propre.
+
+---
+
+## 3 bis. Nos vidéos — À LIRE AVANT D'UPLOADER
+
+La rubrique **« Nos vidéos »** alimente la section vidéo du site (située juste sous
+« Avant / Après »). Chaque entrée comporte :
+
+- **Fichier vidéo** (obligatoire) — un `.mp4`.
+- **Image de couverture** (facultatif mais **recommandé**) — l'image affichée avant
+  la lecture. Sans elle, le navigateur prend la première image du film, souvent terne.
+- **Titre** (facultatif) — affiché sous la vidéo, ex. « Cuisine laquée · Villa Harhoura ».
+
+> ⚠️ **Le poids des vidéos est le point critique.** Contrairement aux images, une vidéo
+> pèse très lourd et reste **définitivement** dans l'historique du site. Une vidéo
+> sortie du téléphone fait souvent 100 Mo et plus : c'est beaucoup trop.
+>
+> **La règle : des clips courts de 15 à 30 secondes, compressés à moins de 5 Mo.**
+> Outil gratuit conseillé : https://www.freeconvert.com/video-compressor
+> (réglez la largeur sur 1080 px et laissez la compression faire le reste).
+>
+> Uploadez les vidéos **une par une** : l'envoi passe par GitHub et un gros fichier
+> peut échouer en silence.
+
+Si la liste est **vide**, la section « Nos vidéos » disparaît simplement du site —
+rien ne casse et aucun espace vide n'apparaît.
 
 ---
 
